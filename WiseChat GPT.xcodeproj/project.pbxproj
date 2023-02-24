@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		210883BD29A94A830085FCC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883BC29A94A830085FCC8 /* AppDelegate.swift */; };
+		210883BF29A94A830085FCC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883BE29A94A830085FCC8 /* SceneDelegate.swift */; };
+		210883C129A94A830085FCC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883C029A94A830085FCC8 /* ViewController.swift */; };
+		210883C429A94A830085FCC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210883C229A94A830085FCC8 /* Main.storyboard */; };
+		210883C729A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 210883C529A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld */; };
+		210883C929A94A850085FCC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210883C829A94A850085FCC8 /* Assets.xcassets */; };
+		210883CC29A94A850085FCC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210883CA29A94A850085FCC8 /* LaunchScreen.storyboard */; };
+		210883D729A94A850085FCC8 /* WiseChat_GPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883D629A94A850085FCC8 /* WiseChat_GPTTests.swift */; };
+		210883E129A94A850085FCC8 /* WiseChat_GPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883E029A94A850085FCC8 /* WiseChat_GPTUITests.swift */; };
+		210883E329A94A850085FCC8 /* WiseChat_GPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883E229A94A850085FCC8 /* WiseChat_GPTUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		210883D329A94A850085FCC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 210883B129A94A830085FCC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 210883B829A94A830085FCC8;
+			remoteInfo = "WiseChat GPT";
+		};
+		210883DD29A94A850085FCC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 210883B129A94A830085FCC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 210883B829A94A830085FCC8;
+			remoteInfo = "WiseChat GPT";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		210883B929A94A830085FCC8 /* WiseChat GPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WiseChat GPT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		210883BC29A94A830085FCC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		210883BE29A94A830085FCC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		210883C029A94A830085FCC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		210883C329A94A830085FCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		210883C629A94A830085FCC8 /* WiseChat_GPT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WiseChat_GPT.xcdatamodel; sourceTree = "<group>"; };
+		210883C829A94A850085FCC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		210883CB29A94A850085FCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		210883CD29A94A850085FCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		210883D229A94A850085FCC8 /* WiseChat GPTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WiseChat GPTTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		210883D629A94A850085FCC8 /* WiseChat_GPTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseChat_GPTTests.swift; sourceTree = "<group>"; };
+		210883DC29A94A850085FCC8 /* WiseChat GPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WiseChat GPTUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		210883E029A94A850085FCC8 /* WiseChat_GPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseChat_GPTUITests.swift; sourceTree = "<group>"; };
+		210883E229A94A850085FCC8 /* WiseChat_GPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseChat_GPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		210883B629A94A830085FCC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		210883CF29A94A850085FCC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		210883D929A94A850085FCC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		210883B029A94A830085FCC8 = {
+			isa = PBXGroup;
+			children = (
+				210883BB29A94A830085FCC8 /* WiseChat GPT */,
+				210883D529A94A850085FCC8 /* WiseChat GPTTests */,
+				210883DF29A94A850085FCC8 /* WiseChat GPTUITests */,
+				210883BA29A94A830085FCC8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		210883BA29A94A830085FCC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				210883B929A94A830085FCC8 /* WiseChat GPT.app */,
+				210883D229A94A850085FCC8 /* WiseChat GPTTests.xctest */,
+				210883DC29A94A850085FCC8 /* WiseChat GPTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		210883BB29A94A830085FCC8 /* WiseChat GPT */ = {
+			isa = PBXGroup;
+			children = (
+				210883BC29A94A830085FCC8 /* AppDelegate.swift */,
+				210883BE29A94A830085FCC8 /* SceneDelegate.swift */,
+				210883C029A94A830085FCC8 /* ViewController.swift */,
+				210883C229A94A830085FCC8 /* Main.storyboard */,
+				210883C829A94A850085FCC8 /* Assets.xcassets */,
+				210883CA29A94A850085FCC8 /* LaunchScreen.storyboard */,
+				210883CD29A94A850085FCC8 /* Info.plist */,
+				210883C529A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld */,
+			);
+			path = "WiseChat GPT";
+			sourceTree = "<group>";
+		};
+		210883D529A94A850085FCC8 /* WiseChat GPTTests */ = {
+			isa = PBXGroup;
+			children = (
+				210883D629A94A850085FCC8 /* WiseChat_GPTTests.swift */,
+			);
+			path = "WiseChat GPTTests";
+			sourceTree = "<group>";
+		};
+		210883DF29A94A850085FCC8 /* WiseChat GPTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				210883E029A94A850085FCC8 /* WiseChat_GPTUITests.swift */,
+				210883E229A94A850085FCC8 /* WiseChat_GPTUITestsLaunchTests.swift */,
+			);
+			path = "WiseChat GPTUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		210883B829A94A830085FCC8 /* WiseChat GPT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 210883E629A94A850085FCC8 /* Build configuration list for PBXNativeTarget "WiseChat GPT" */;
+			buildPhases = (
+				210883B529A94A830085FCC8 /* Sources */,
+				210883B629A94A830085FCC8 /* Frameworks */,
+				210883B729A94A830085FCC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WiseChat GPT";
+			productName = "WiseChat GPT";
+			productReference = 210883B929A94A830085FCC8 /* WiseChat GPT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		210883D129A94A850085FCC8 /* WiseChat GPTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 210883E929A94A850085FCC8 /* Build configuration list for PBXNativeTarget "WiseChat GPTTests" */;
+			buildPhases = (
+				210883CE29A94A850085FCC8 /* Sources */,
+				210883CF29A94A850085FCC8 /* Frameworks */,
+				210883D029A94A850085FCC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				210883D429A94A850085FCC8 /* PBXTargetDependency */,
+			);
+			name = "WiseChat GPTTests";
+			productName = "WiseChat GPTTests";
+			productReference = 210883D229A94A850085FCC8 /* WiseChat GPTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		210883DB29A94A850085FCC8 /* WiseChat GPTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 210883EC29A94A850085FCC8 /* Build configuration list for PBXNativeTarget "WiseChat GPTUITests" */;
+			buildPhases = (
+				210883D829A94A850085FCC8 /* Sources */,
+				210883D929A94A850085FCC8 /* Frameworks */,
+				210883DA29A94A850085FCC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				210883DE29A94A850085FCC8 /* PBXTargetDependency */,
+			);
+			name = "WiseChat GPTUITests";
+			productName = "WiseChat GPTUITests";
+			productReference = 210883DC29A94A850085FCC8 /* WiseChat GPTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		210883B129A94A830085FCC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					210883B829A94A830085FCC8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					210883D129A94A850085FCC8 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 210883B829A94A830085FCC8;
+					};
+					210883DB29A94A850085FCC8 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 210883B829A94A830085FCC8;
+					};
+				};
+			};
+			buildConfigurationList = 210883B429A94A830085FCC8 /* Build configuration list for PBXProject "WiseChat GPT" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 210883B029A94A830085FCC8;
+			productRefGroup = 210883BA29A94A830085FCC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				210883B829A94A830085FCC8 /* WiseChat GPT */,
+				210883D129A94A850085FCC8 /* WiseChat GPTTests */,
+				210883DB29A94A850085FCC8 /* WiseChat GPTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		210883B729A94A830085FCC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210883CC29A94A850085FCC8 /* LaunchScreen.storyboard in Resources */,
+				210883C929A94A850085FCC8 /* Assets.xcassets in Resources */,
+				210883C429A94A830085FCC8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		210883D029A94A850085FCC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		210883DA29A94A850085FCC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		210883B529A94A830085FCC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210883C129A94A830085FCC8 /* ViewController.swift in Sources */,
+				210883BD29A94A830085FCC8 /* AppDelegate.swift in Sources */,
+				210883BF29A94A830085FCC8 /* SceneDelegate.swift in Sources */,
+				210883C729A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		210883CE29A94A850085FCC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210883D729A94A850085FCC8 /* WiseChat_GPTTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		210883D829A94A850085FCC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210883E329A94A850085FCC8 /* WiseChat_GPTUITestsLaunchTests.swift in Sources */,
+				210883E129A94A850085FCC8 /* WiseChat_GPTUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		210883D429A94A850085FCC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 210883B829A94A830085FCC8 /* WiseChat GPT */;
+			targetProxy = 210883D329A94A850085FCC8 /* PBXContainerItemProxy */;
+		};
+		210883DE29A94A850085FCC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 210883B829A94A830085FCC8 /* WiseChat GPT */;
+			targetProxy = 210883DD29A94A850085FCC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		210883C229A94A830085FCC8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				210883C329A94A830085FCC8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		210883CA29A94A850085FCC8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				210883CB29A94A850085FCC8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		210883E429A94A850085FCC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		210883E529A94A850085FCC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		210883E729A94A850085FCC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WiseChat GPT/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.murad.www.WiseChat-GPT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		210883E829A94A850085FCC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WiseChat GPT/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.murad.www.WiseChat-GPT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		210883EA29A94A850085FCC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.murad.www.WiseChat-GPTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiseChat GPT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WiseChat GPT";
+			};
+			name = Debug;
+		};
+		210883EB29A94A850085FCC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.murad.www.WiseChat-GPTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiseChat GPT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WiseChat GPT";
+			};
+			name = Release;
+		};
+		210883ED29A94A850085FCC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.murad.www.WiseChat-GPTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WiseChat GPT";
+			};
+			name = Debug;
+		};
+		210883EE29A94A850085FCC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.murad.www.WiseChat-GPTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WiseChat GPT";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		210883B429A94A830085FCC8 /* Build configuration list for PBXProject "WiseChat GPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				210883E429A94A850085FCC8 /* Debug */,
+				210883E529A94A850085FCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		210883E629A94A850085FCC8 /* Build configuration list for PBXNativeTarget "WiseChat GPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				210883E729A94A850085FCC8 /* Debug */,
+				210883E829A94A850085FCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		210883E929A94A850085FCC8 /* Build configuration list for PBXNativeTarget "WiseChat GPTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				210883EA29A94A850085FCC8 /* Debug */,
+				210883EB29A94A850085FCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		210883EC29A94A850085FCC8 /* Build configuration list for PBXNativeTarget "WiseChat GPTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				210883ED29A94A850085FCC8 /* Debug */,
+				210883EE29A94A850085FCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		210883C529A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				210883C629A94A830085FCC8 /* WiseChat_GPT.xcdatamodel */,
+			);
+			currentVersion = 210883C629A94A830085FCC8 /* WiseChat_GPT.xcdatamodel */;
+			path = WiseChat_GPT.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 210883B129A94A830085FCC8 /* Project object */;
+}
