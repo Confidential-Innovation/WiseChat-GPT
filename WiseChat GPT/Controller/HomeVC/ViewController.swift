@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Vision
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -15,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var placeHolderTextLabel: UILabel!
     
     var chat = [String]()
+    var request = VNRecognizeTextRequest(completionHandler: nil)
+    var textShare = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +27,51 @@ class ViewController: UIViewController {
         setupUI()
         
     }
+    // MARK: - Private method
+
+    private func recongnizeText(image: UIImage){
+        /// setup TextRecognition
+        var textString = ""
+
+        request = VNRecognizeTextRequest(completionHandler: {(request, error) in
+
+            guard let observations = request.results as? [VNRecognizedTextObservation] else {fatalError("Recieved invalid Observation")}
+
+            for observation in observations{
+                guard let topCandidate = observation.topCandidates(1).first else {
+                    print("No candidate")
+                    continue
+                }
+
+                textString += "\n\(topCandidate.string)"
+
+                DispatchQueue.main.async { [self] in
+//                    self.stopLodding()
+                    self.wiseChatTextView.text = textString
+//                    self.label.animate(newText: textString, characterDelay: 0.05)
+
+//                    lodding.isHidden = true
+                }
+            }
+        })
+
+        /// add some properties
+        request.customWords = ["custom"]
+        request.minimumTextHeight = 0.03125
+        request.recognitionLevel = .accurate
+        request.recognitionLanguages = ["en"]
+        request.usesLanguageCorrection = true
+
+        let requests = [request]
+
+        /// creating request handler
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let img = image.cgImage else {fatalError("Missing image scan")}
+            let handle = VNImageRequestHandler(cgImage: img, options: [:])
+            try? handle.perform(requests)
+        }
+    }
+   
     
     private func setupUI() {
         wiseChatTextView.layer.borderColor = .init(red: 33/33, green: 200/4, blue: 222/3, alpha: 1)
@@ -69,6 +119,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func wiseChatScannerActionButton(_ sender: UIButton) {
+        let imagePhotoLibraryPicker = UIImagePickerController()
+        imagePhotoLibraryPicker.delegate = self
+        imagePhotoLibraryPicker.allowsEditing = true
+        imagePhotoLibraryPicker.sourceType = .camera
+        imagePhotoLibraryPicker.modalPresentationStyle = .fullScreen
+        self.present(imagePhotoLibraryPicker, animated: true, completion: nil)
     }
     
     @IBAction func wiseChatSendButtonAction(_ sender: UIButton) {
@@ -113,6 +169,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+}
+
+// MARK: Camera UIImageViewController Delegate
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+//        self.textView.text = ""
+        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+//        scanImageView.image = image
+        recongnizeText(image: image!)
+    }
 }
 
 extension ViewController : UITextViewDelegate {
