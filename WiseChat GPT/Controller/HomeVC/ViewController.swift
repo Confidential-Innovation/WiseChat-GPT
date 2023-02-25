@@ -99,7 +99,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.wiseChatTextLabel?.text = chat[indexPath.row]
             cell.bgcellView.backgroundColor = .systemBlue
             cell.bgcellView.layer.cornerRadius = 10
-            cell.wiseChatImageView.image = UIImage(named: "men")
+            cell.wiseChatImageView.image = UIImage(named: "man")
             return cell
 
         } else {
@@ -117,7 +117,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        print("abc\(String(describing: wiseChatTextView.text))")
+        print("\(String(describing: wiseChatTextView.text))")
         placeHolderTextLabel.isHidden = !wiseChatTextView.text.isEmpty
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
