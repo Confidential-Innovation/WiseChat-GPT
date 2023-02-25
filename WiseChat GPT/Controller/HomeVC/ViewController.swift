@@ -132,7 +132,7 @@ class ViewController: UIViewController {
         if let promptText = wiseChatTextView.text, promptText.count > 0 {
             fetchChatGPTForResponse(prompt: promptText)
             placeHolderTextLabel.isHidden = false
-            wiseChatTextView.text = ""
+//            wiseChatTextView.text = ""
             
         } else {
             print("Please check textfield")
