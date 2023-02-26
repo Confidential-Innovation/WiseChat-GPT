@@ -17,7 +17,7 @@ Go to the link of these <a href="https://platform.openai.com/account/api-keys" t
 
   <h2> WiseChat GPT App Example Photo -></h2>
 
-|First page|Questions page|Answer full codecode|Scanner page|
+|First page|Questions page|Answer full code|Scanner page|
 |---|---|---|---|
 |<img src="./Image sample/1.png" width='200px'/>|<img src="./Image sample/2.png" width='200px'/> | <img src="./Image sample/3.png" width='200px'/>| <img src="./Image sample/4.png" width='200px'/>|
 </div>
