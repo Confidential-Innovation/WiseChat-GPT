@@ -27,7 +27,7 @@
                                                 <rect key="frame" x="63" y="5" width="267" height="50.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6d-MS-Y2X">
@@ -55,7 +55,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me anything...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-Gw-l4P">
-                                                <rect key="frame" x="68" y="12.666666666666629" width="237" height="19"/>
+                                                <rect key="frame" x="68" y="18.666666666666629" width="237" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="qc1-Gw-l4P" firstAttribute="centerY" secondItem="MNk-0i-tes" secondAttribute="centerY" constant="-8" id="5Oq-71-4eh"/>
+                                            <constraint firstItem="qc1-Gw-l4P" firstAttribute="centerY" secondItem="MNk-0i-tes" secondAttribute="centerY" constant="-2" id="5Oq-71-4eh"/>
                                             <constraint firstAttribute="bottom" secondItem="HNt-gf-j4t" secondAttribute="bottom" constant="5" id="CM1-ZZ-tqI"/>
                                             <constraint firstItem="R6d-MS-Y2X" firstAttribute="centerY" secondItem="MNk-0i-tes" secondAttribute="centerY" id="E1q-2C-A8P"/>
                                             <constraint firstAttribute="trailing" secondItem="m2k-n3-ubE" secondAttribute="trailing" constant="14" id="HTc-aX-QP3"/>
@@ -108,6 +108,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="settingsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WUS-fo-mfd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -136,7 +139,7 @@
                                             <constraint firstAttribute="height" constant="0.5" id="7gj-lu-NBm"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TBC-VT-C2K">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TBC-VT-C2K">
                                         <rect key="frame" x="0.0" y="36" width="393" height="656.66666666666663"/>
                                         <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>

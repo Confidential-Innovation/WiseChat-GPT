@@ -139,6 +139,13 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func settingsButtonAction(_ sender: UIButton) {
+        let st = UIStoryboard(name: "Settings", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "SettingsViewController")
+        self.present(vc, animated: true)
+    }
+    
+    
 
 }
 
@@ -153,6 +160,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = wiseChatTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WiseChatTableViewCell
             cell.selectionStyle = .none
             cell.wiseChatTextLabel?.text = chat[indexPath.row]
+            cell.wiseChatTextLabel.textColor = .white
             cell.bgcellView.backgroundColor = .systemBlue
             cell.bgcellView.layer.cornerRadius = 10
             cell.wiseChatImageView.image = UIImage(named: "man")
@@ -161,8 +169,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = wiseChatTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WiseChatTableViewCell
             cell.selectionStyle = .none
-            cell.bgcellView.backgroundColor = .systemGray
+            cell.bgcellView.backgroundColor = .systemGray5
             cell.wiseChatTextLabel?.text = chat[indexPath.row]
+            cell.wiseChatTextLabel.textColor = .black
             cell.wiseChatImageView.image = UIImage(named: "robot")
             return cell
 

@@ -22,6 +22,8 @@
 		210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F429A94F660085FCC8 /* APIServiceModel.swift */; };
 		210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F529A94F660085FCC8 /* ChatGPTResponse.swift */; };
 		210883F929A94F660085FCC8 /* WeChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F629A94F660085FCC8 /* WeChatResponse.swift */; };
+		21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */; };
+		21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		210883F429A94F660085FCC8 /* APIServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceModel.swift; sourceTree = "<group>"; };
 		210883F529A94F660085FCC8 /* ChatGPTResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatGPTResponse.swift; sourceTree = "<group>"; };
 		210883F629A94F660085FCC8 /* WeChatResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatResponse.swift; sourceTree = "<group>"; };
+		21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 		2182488029A9F020001EC910 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				21B97D8A29AD2C1E004FB3F1 /* SettingsVC */,
 				2182488429A9F081001EC910 /* HomeVC */,
 			);
 			path = Controller;
@@ -199,6 +204,15 @@
 				210883F629A94F660085FCC8 /* WeChatResponse.swift */,
 			);
 			path = ChatGPTAPI;
+			sourceTree = "<group>";
+		};
+		21B97D8A29AD2C1E004FB3F1 /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */,
+				21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */,
+			);
+			path = SettingsVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +323,7 @@
 				210883F229A94CCC0085FCC8 /* WiseChatTableViewCell.xib in Resources */,
 				210883C929A94A850085FCC8 /* Assets.xcassets in Resources */,
 				210883C429A94A830085FCC8 /* Main.storyboard in Resources */,
+				21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +356,7 @@
 				210883C729A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld in Sources */,
 				210883F129A94CCC0085FCC8 /* WiseChatTableViewCell.swift in Sources */,
 				210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */,
+				21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

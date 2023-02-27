@@ -16,7 +16,8 @@ enum APIError: Error {
 class APIService {
     
 //    let apiKey = "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"
-    let apiKey = "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"
+//    let apiKey = "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"
+    let apiKey = "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"
     
     func fetchImageForPrompt(_ prompt: String) async throws -> UIImage {
         let fetchImageURL = "https://api.openai.com/v1/images/generations"
@@ -61,7 +62,7 @@ class APIService {
             let jsonBody: [String: Any] = [
                 "prompt": "\(prompt)",
                 "n": 1,
-                "size": "10024x10024"
+                "size": "1024x1024"
             ]
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: jsonBody)
         } else {
