@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var placeHolderTextLabel: UILabel!
     
     var chat = [String]()
+    var s = ""
     var request = VNRecognizeTextRequest(completionHandler: nil)
     var textShare = ""
     
@@ -48,6 +49,8 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async { [self] in
 //                    self.stopLodding()
                     self.wiseChatTextView.text = textString
+                    placeHolderTextLabel.isHidden = !wiseChatTextView.text.isEmpty
+
 //                    self.label.animate(newText: textString, characterDelay: 0.05)
 
 //                    lodding.isHidden = true
@@ -109,6 +112,7 @@ class ViewController: UIViewController {
                 let gptText = try await APIService().sendPromtToGPT(promt: prompt)
                 await MainActor.run {
                     chat.append(prompt)
+                    chat.append(textShare)
                     chat.append(gptText.replacingOccurrences(of: "\n\n", with: ""))
                     wiseChatTableView.reloadData()
                 }
@@ -132,7 +136,7 @@ class ViewController: UIViewController {
         if let promptText = wiseChatTextView.text, promptText.count > 0 {
             fetchChatGPTForResponse(prompt: promptText)
             placeHolderTextLabel.isHidden = false
-//            wiseChatTextView.text = ""
+            wiseChatTextView.text = ""
             
         } else {
             print("Please check textfield")

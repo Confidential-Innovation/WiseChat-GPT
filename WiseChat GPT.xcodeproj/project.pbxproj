@@ -21,7 +21,7 @@
 		210883F229A94CCC0085FCC8 /* WiseChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210883F029A94CCC0085FCC8 /* WiseChatTableViewCell.xib */; };
 		210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F429A94F660085FCC8 /* APIServiceModel.swift */; };
 		210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F529A94F660085FCC8 /* ChatGPTResponse.swift */; };
-		210883F929A94F660085FCC8 /* WeChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F629A94F660085FCC8 /* WeChatResponse.swift */; };
+		210883F929A94F660085FCC8 /* WiseChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F629A94F660085FCC8 /* WiseChatResponse.swift */; };
 		21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */; };
 		21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,7 @@
 		210883F029A94CCC0085FCC8 /* WiseChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WiseChatTableViewCell.xib; sourceTree = "<group>"; };
 		210883F429A94F660085FCC8 /* APIServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceModel.swift; sourceTree = "<group>"; };
 		210883F529A94F660085FCC8 /* ChatGPTResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatGPTResponse.swift; sourceTree = "<group>"; };
-		210883F629A94F660085FCC8 /* WeChatResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatResponse.swift; sourceTree = "<group>"; };
+		210883F629A94F660085FCC8 /* WiseChatResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiseChatResponse.swift; sourceTree = "<group>"; };
 		21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,7 +201,7 @@
 			children = (
 				210883F429A94F660085FCC8 /* APIServiceModel.swift */,
 				210883F529A94F660085FCC8 /* ChatGPTResponse.swift */,
-				210883F629A94F660085FCC8 /* WeChatResponse.swift */,
+				210883F629A94F660085FCC8 /* WiseChatResponse.swift */,
 			);
 			path = ChatGPTAPI;
 			sourceTree = "<group>";
@@ -350,7 +350,7 @@
 			files = (
 				210883C129A94A830085FCC8 /* ViewController.swift in Sources */,
 				210883BD29A94A830085FCC8 /* AppDelegate.swift in Sources */,
-				210883F929A94F660085FCC8 /* WeChatResponse.swift in Sources */,
+				210883F929A94F660085FCC8 /* WiseChatResponse.swift in Sources */,
 				210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */,
 				210883BF29A94A830085FCC8 /* SceneDelegate.swift in Sources */,
 				210883C729A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld in Sources */,
@@ -533,6 +533,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SUVM6SNN22;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WiseChat GPT/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -540,6 +541,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,6 +562,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SUVM6SNN22;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WiseChat GPT/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -567,6 +570,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

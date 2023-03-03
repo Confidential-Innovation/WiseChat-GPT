@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeChatResponse: Decodable {
+struct WiseChatResponse: Decodable {
     let data: [ImageURL]
 }
 

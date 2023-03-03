@@ -15,9 +15,7 @@ enum APIError: Error {
 
 class APIService {
     
-//    let apiKey = "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"
-//    let apiKey = "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"
-    let apiKey = "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"
+    let apiKey = "sk-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"
     
     func fetchImageForPrompt(_ prompt: String) async throws -> UIImage {
         let fetchImageURL = "https://api.openai.com/v1/images/generations"
@@ -26,7 +24,7 @@ class APIService {
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
       
         let decoder = JSONDecoder()
-        let results = try decoder.decode(WeChatResponse.self, from: data)
+        let results = try decoder.decode(WiseChatResponse.self, from: data)
 
         let imageURL = results.data[0].url
         guard let imageURL = URL(string: imageURL) else {
