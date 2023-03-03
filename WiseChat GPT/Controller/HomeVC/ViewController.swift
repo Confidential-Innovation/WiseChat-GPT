@@ -13,25 +13,47 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var wiseChatTextView: UITextView!
     @IBOutlet weak var wiseChatTableView: UITableView!
-    
     @IBOutlet weak var placeHolderTextLabel: UILabel!
-    
+    var activityView: UIActivityIndicatorView?
+    let container: UIView = UIView()
+
+
     var chat = [String]()
-    var s = ""
     var request = VNRecognizeTextRequest(completionHandler: nil)
     var textShare = ""
+    var chat2 = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTabelViewCell()
         setupUI()
+        showActivityIndicatory()
         
     }
     // MARK: - Private method
+    
+    func showActivityIndicatory() {
+        container.frame = CGRect(x: 0, y: 0, width: 80, height: 75)
+        container.backgroundColor = .white
+        activityView = UIActivityIndicatorView(style: .large)
+        activityView?.color = .black
+        activityView?.center = container.center
+        container.center = self.view.center
+        container.addSubview(activityView!)
+        self.view.addSubview(container)
+        container.isHidden = true
+        container.layer.cornerRadius = 10
+        wiseChatTableView.alpha = 1.0
+    }
 
     private func recongnizeText(image: UIImage){
-        /// setup TextRecognition
+        // setup TextRecognition
+        
+        activityView?.startAnimating()
+        wiseChatTableView.alpha = 0.4
+        container.isHidden = false
+        activityView?.isHidden = false
         var textString = ""
 
         request = VNRecognizeTextRequest(completionHandler: {(request, error) in
@@ -44,25 +66,24 @@ class ViewController: UIViewController {
                     continue
                 }
 
-                textString += "\n\(topCandidate.string)"
+                textString += "\(topCandidate.string)"
 
                 DispatchQueue.main.async { [self] in
-//                    self.stopLodding()
-                    self.wiseChatTextView.text = textString
+                   
+                    wiseChatTextView.text = textString
                     placeHolderTextLabel.isHidden = !wiseChatTextView.text.isEmpty
-
-//                    self.label.animate(newText: textString, characterDelay: 0.05)
-
-//                    lodding.isHidden = true
+                    activityView?.stopAnimating()
+                    wiseChatTableView.alpha = 1.0
+                    activityView?.isHidden = true
+                    container.isHidden = true
                 }
             }
         })
 
         /// add some properties
-        request.customWords = ["custom"]
-        request.minimumTextHeight = 0.03125
         request.recognitionLevel = .accurate
-        request.recognitionLanguages = ["en"]
+        request.recognitionLanguages = ["en-US","fr-FR", "zh-Hans"]
+        request.minimumTextHeight = 0.05
         request.usesLanguageCorrection = true
 
         let requests = [request]
@@ -82,7 +103,11 @@ class ViewController: UIViewController {
         wiseChatTextView.layer.cornerRadius = 15
         wiseChatTextView.delegate = self
         placeHolderTextLabel.alpha = 0.5
+        wiseChatTextView.delegate = self
         wiseChatTextView.textColor = UIColor.black
+        keyboardTapToHide()
+        wiseChatTableView.reloadData()
+
     }
     
     func setupTabelViewCell() {
@@ -112,7 +137,7 @@ class ViewController: UIViewController {
                 let gptText = try await APIService().sendPromtToGPT(promt: prompt)
                 await MainActor.run {
                     chat.append(prompt)
-                    chat.append(textShare)
+                    chat2.append(prompt)
                     chat.append(gptText.replacingOccurrences(of: "\n\n", with: ""))
                     wiseChatTableView.reloadData()
                 }
@@ -132,7 +157,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func wiseChatSendButtonAction(_ sender: UIButton) {
-        wiseChatTextView.resignFirstResponder()
+//        wiseChatTextView.resignFirstResponder()
         if let promptText = wiseChatTextView.text, promptText.count > 0 {
             fetchChatGPTForResponse(prompt: promptText)
             placeHolderTextLabel.isHidden = false
@@ -174,7 +199,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = wiseChatTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WiseChatTableViewCell
             cell.selectionStyle = .none
             cell.bgcellView.backgroundColor = .systemGray5
-            cell.wiseChatTextLabel?.text = chat[indexPath.row]
+            cell.wiseChatTextLabel?.text = (chat[indexPath.row])
             cell.wiseChatTextLabel.textColor = .black
             cell.wiseChatImageView.image = UIImage(named: "robot")
             return cell
@@ -189,16 +214,38 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-//        self.textView.text = ""
         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-//        scanImageView.image = image
         recongnizeText(image: image!)
     }
 }
 
 extension ViewController : UITextViewDelegate {
+    
+    func wiseTextViewShouldReturn(_ UITextView: UITextView) -> Bool {
+        wiseChatTextView.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches,
+                           with: event)
+        self.view.endEditing(true)
+        
+    }
+    
+    func keyboardTapToHide() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+
+    
     func textViewDidChange(_ textView: UITextView) {
-        print("\(String(describing: wiseChatTextView.text))")
+//        print("\(String(describing: wiseChatTextView.text))")
         placeHolderTextLabel.isHidden = !wiseChatTextView.text.isEmpty
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
