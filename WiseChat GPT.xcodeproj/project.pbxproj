@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2182488529A9F099001EC910 /* ChatGPTAPI */,
-				2189F24C29B3A29000C48215 /* Define.swift */,
+				21FBD96729B3E444003FCE8C /* LaunchDefine */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +255,14 @@
 				21FBD96529B3BEB0003FCE8C /* SecondLunch.storyboard */,
 			);
 			path = SecondLaunchVC;
+			sourceTree = "<group>";
+		};
+		21FBD96729B3E444003FCE8C /* LaunchDefine */ = {
+			isa = PBXGroup;
+			children = (
+				2189F24C29B3A29000C48215 /* Define.swift */,
+			);
+			path = LaunchDefine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
