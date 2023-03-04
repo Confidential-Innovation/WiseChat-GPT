@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		210883BD29A94A830085FCC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883BC29A94A830085FCC8 /* AppDelegate.swift */; };
 		210883BF29A94A830085FCC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883BE29A94A830085FCC8 /* SceneDelegate.swift */; };
-		210883C129A94A830085FCC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883C029A94A830085FCC8 /* ViewController.swift */; };
-		210883C429A94A830085FCC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210883C229A94A830085FCC8 /* Main.storyboard */; };
+		210883C129A94A830085FCC8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883C029A94A830085FCC8 /* HomeViewController.swift */; };
+		210883C429A94A830085FCC8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210883C229A94A830085FCC8 /* Home.storyboard */; };
 		210883C729A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 210883C529A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld */; };
 		210883C929A94A850085FCC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210883C829A94A850085FCC8 /* Assets.xcassets */; };
 		210883CC29A94A850085FCC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210883CA29A94A850085FCC8 /* LaunchScreen.storyboard */; };
@@ -22,8 +22,14 @@
 		210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F429A94F660085FCC8 /* APIServiceModel.swift */; };
 		210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F529A94F660085FCC8 /* ChatGPTResponse.swift */; };
 		210883F929A94F660085FCC8 /* WiseChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F629A94F660085FCC8 /* WiseChatResponse.swift */; };
+		2189F24629B38B7300C48215 /* TypingLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F24529B38B7300C48215 /* TypingLoader.swift */; };
+		2189F24D29B3A29000C48215 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F24C29B3A29000C48215 /* Define.swift */; };
+		2189F25129B3A46B00C48215 /* FirstLunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F25029B3A46B00C48215 /* FirstLunchViewController.swift */; };
+		2189F25329B3A6D600C48215 /* CustomLunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2189F25229B3A6D600C48215 /* CustomLunch.storyboard */; };
 		21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */; };
 		21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */; };
+		21FBD96429B3BE9A003FCE8C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */; };
+		21FBD96629B3BEB0003FCE8C /* SecondLunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FBD96529B3BEB0003FCE8C /* SecondLunch.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +53,8 @@
 		210883B929A94A830085FCC8 /* WiseChat GPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WiseChat GPT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		210883BC29A94A830085FCC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		210883BE29A94A830085FCC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		210883C029A94A830085FCC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		210883C329A94A830085FCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		210883C029A94A830085FCC8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		210883C329A94A830085FCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		210883C629A94A830085FCC8 /* WiseChat_GPT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WiseChat_GPT.xcdatamodel; sourceTree = "<group>"; };
 		210883C829A94A850085FCC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		210883CB29A94A850085FCC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,8 +69,14 @@
 		210883F429A94F660085FCC8 /* APIServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceModel.swift; sourceTree = "<group>"; };
 		210883F529A94F660085FCC8 /* ChatGPTResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatGPTResponse.swift; sourceTree = "<group>"; };
 		210883F629A94F660085FCC8 /* WiseChatResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiseChatResponse.swift; sourceTree = "<group>"; };
+		2189F24529B38B7300C48215 /* TypingLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingLoader.swift; sourceTree = "<group>"; };
+		2189F24C29B3A29000C48215 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		2189F25029B3A46B00C48215 /* FirstLunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLunchViewController.swift; sourceTree = "<group>"; };
+		2189F25229B3A6D600C48215 /* CustomLunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomLunch.storyboard; sourceTree = "<group>"; };
 		21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		21FBD96529B3BEB0003FCE8C /* SecondLunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondLunch.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				2182488229A9F034001EC910 /* System */,
+				2189F24429B38B5700C48215 /* Extension */,
 				210883F329A94EAE0085FCC8 /* Model */,
 				2182488129A9F02D001EC910 /* View */,
 				2182488029A9F020001EC910 /* Controller */,
@@ -148,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2182488529A9F099001EC910 /* ChatGPTAPI */,
+				2189F24C29B3A29000C48215 /* Define.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +169,8 @@
 		2182488029A9F020001EC910 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2189F24729B39EFD00C48215 /* FirstLaunchVC */,
+				21FBD96229B3BE6C003FCE8C /* SecondLaunchVC */,
 				21B97D8A29AD2C1E004FB3F1 /* SettingsVC */,
 				2182488429A9F081001EC910 /* HomeVC */,
 			);
@@ -190,8 +206,8 @@
 		2182488429A9F081001EC910 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				210883C029A94A830085FCC8 /* ViewController.swift */,
-				210883C229A94A830085FCC8 /* Main.storyboard */,
+				210883C029A94A830085FCC8 /* HomeViewController.swift */,
+				210883C229A94A830085FCC8 /* Home.storyboard */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -206,6 +222,23 @@
 			path = ChatGPTAPI;
 			sourceTree = "<group>";
 		};
+		2189F24429B38B5700C48215 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2189F24529B38B7300C48215 /* TypingLoader.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2189F24729B39EFD00C48215 /* FirstLaunchVC */ = {
+			isa = PBXGroup;
+			children = (
+				2189F25029B3A46B00C48215 /* FirstLunchViewController.swift */,
+				2189F25229B3A6D600C48215 /* CustomLunch.storyboard */,
+			);
+			path = FirstLaunchVC;
+			sourceTree = "<group>";
+		};
 		21B97D8A29AD2C1E004FB3F1 /* SettingsVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +246,15 @@
 				21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */,
 			);
 			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		21FBD96229B3BE6C003FCE8C /* SecondLaunchVC */ = {
+			isa = PBXGroup;
+			children = (
+				21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */,
+				21FBD96529B3BEB0003FCE8C /* SecondLunch.storyboard */,
+			);
+			path = SecondLaunchVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +361,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2189F25329B3A6D600C48215 /* CustomLunch.storyboard in Resources */,
 				210883CC29A94A850085FCC8 /* LaunchScreen.storyboard in Resources */,
 				210883F229A94CCC0085FCC8 /* WiseChatTableViewCell.xib in Resources */,
+				21FBD96629B3BEB0003FCE8C /* SecondLunch.storyboard in Resources */,
 				210883C929A94A850085FCC8 /* Assets.xcassets in Resources */,
-				210883C429A94A830085FCC8 /* Main.storyboard in Resources */,
+				210883C429A94A830085FCC8 /* Home.storyboard in Resources */,
 				21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,14 +392,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210883C129A94A830085FCC8 /* ViewController.swift in Sources */,
+				210883C129A94A830085FCC8 /* HomeViewController.swift in Sources */,
 				210883BD29A94A830085FCC8 /* AppDelegate.swift in Sources */,
+				2189F25129B3A46B00C48215 /* FirstLunchViewController.swift in Sources */,
 				210883F929A94F660085FCC8 /* WiseChatResponse.swift in Sources */,
+				2189F24629B38B7300C48215 /* TypingLoader.swift in Sources */,
 				210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */,
+				21FBD96429B3BE9A003FCE8C /* SecondViewController.swift in Sources */,
 				210883BF29A94A830085FCC8 /* SceneDelegate.swift in Sources */,
 				210883C729A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld in Sources */,
 				210883F129A94CCC0085FCC8 /* WiseChatTableViewCell.swift in Sources */,
 				210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */,
+				2189F24D29B3A29000C48215 /* Define.swift in Sources */,
 				21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,12 +441,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		210883C229A94A830085FCC8 /* Main.storyboard */ = {
+		210883C229A94A830085FCC8 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				210883C329A94A830085FCC8 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		210883CA29A94A850085FCC8 /* LaunchScreen.storyboard */ = {
@@ -462,6 +510,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -516,6 +566,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -538,7 +590,8 @@
 				INFOPLIST_FILE = "WiseChat GPT/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				"INFOPLIST_KEY_UIMainStoryboardFile[sdk=*]" = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -567,7 +620,7 @@
 				INFOPLIST_FILE = "WiseChat GPT/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;

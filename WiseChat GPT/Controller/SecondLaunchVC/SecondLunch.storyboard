@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Y6W-OH-hqX" customClass="SecondViewController" customModule="WiseChat_GPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="Spy-Gn-F4f">
+                                <rect key="frame" x="16" y="127" width="361" height="538"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUl-ur-ITC">
+                                <rect key="frame" x="30" y="705" width="333" height="51"/>
+                                <color key="backgroundColor" red="1" green="0.3875518007" blue="0.27470855929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Ask Question">
+                                    <imageReference key="image" image="ellipsis.message.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="startQuestionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dFr-is-Lc1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.088443023989899006" green="0.082142714541310349" blue="0.080838719817951349" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Spy-Gn-F4f" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-30" id="4xr-Iq-W3m"/>
+                            <constraint firstItem="Spy-Gn-F4f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LWM-Wx-rAo"/>
+                            <constraint firstItem="Spy-Gn-F4f" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.631455" id="Rwd-hc-vvi"/>
+                            <constraint firstItem="BUl-ur-ITC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Tzs-Ow-iNb"/>
+                            <constraint firstItem="Spy-Gn-F4f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="UaU-Ow-4sp"/>
+                            <constraint firstItem="BUl-ur-ITC" firstAttribute="top" secondItem="Spy-Gn-F4f" secondAttribute="bottom" constant="40" id="aul-JW-BBe"/>
+                            <constraint firstItem="BUl-ur-ITC" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.06" id="oWf-n7-PTr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Spy-Gn-F4f" secondAttribute="trailing" constant="16" id="pgt-6y-rp8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BUl-ur-ITC" secondAttribute="trailing" constant="30" id="sJi-9S-72w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="askButton" destination="BUl-ur-ITC" id="BDx-Zu-IJW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ellipsis.message.fill" catalog="system" width="128" height="114"/>
+        <image name="second" width="328" height="469"/>
+    </resources>
+</document>
