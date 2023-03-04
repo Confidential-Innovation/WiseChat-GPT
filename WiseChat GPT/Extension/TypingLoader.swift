@@ -61,6 +61,7 @@ class DotsAnimation {
                     relativeDuration: .infinity,
                     animations: {
                         dotToAnimate.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+                        dotToAnimate.layer.repeatCount = .infinity
                     }
                 )
                 UIView.addKeyframe(
@@ -68,6 +69,7 @@ class DotsAnimation {
                     relativeDuration: 0.66666666667,
                     animations: {
                         dotToAnimate.transform = CGAffineTransform.identity
+                        dotToAnimate.layer.repeatCount = .infinity
                     }
                 )
             }

@@ -191,6 +191,10 @@ class HomeViewController: UIViewController {
                 }
             } catch {
                 print("Error! Your api key is already used.\nPlease Change your API Key?")
+                typingLoaderView.isHidden = true
+                typingLoaderView.isHidden = true
+                wiseChatTableView.alpha = 1.0
+                wiseChatTableView.reloadData()
             }
         }
     }
