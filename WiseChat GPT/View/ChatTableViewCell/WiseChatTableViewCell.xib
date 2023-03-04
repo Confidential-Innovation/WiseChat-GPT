@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-0z-lN0">
-                                <rect key="frame" x="54" y="5" width="250" height="34"/>
+                                <rect key="frame" x="54" y="5" width="243" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Lyn-6t-ANA"/>
                                 </constraints>
@@ -43,7 +44,7 @@
                             <constraint firstItem="yfY-0z-lN0" firstAttribute="leading" secondItem="k50-c4-Fwy" secondAttribute="trailing" constant="15" id="syd-Yb-ldw"/>
                             <constraint firstItem="k50-c4-Fwy" firstAttribute="leading" secondItem="9LR-MC-WZK" secondAttribute="leading" constant="5" id="tIp-zY-ham"/>
                             <constraint firstAttribute="bottom" secondItem="yfY-0z-lN0" secondAttribute="bottom" constant="5" id="tYC-bm-mPl"/>
-                            <constraint firstAttribute="trailing" secondItem="yfY-0z-lN0" secondAttribute="trailing" id="wyO-UN-L6L"/>
+                            <constraint firstAttribute="trailing" secondItem="yfY-0z-lN0" secondAttribute="trailing" constant="7" id="wyO-UN-L6L"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -14,14 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var wiseChatTextView: UITextView!
     @IBOutlet weak var wiseChatTableView: UITableView!
     @IBOutlet weak var placeHolderTextLabel: UILabel!
+    @IBOutlet weak var bottomNSLayoutView: NSLayoutConstraint!
+        
     var activityView: UIActivityIndicatorView?
     let container: UIView = UIView()
 
-
+    
     var chat = [String]()
     var request = VNRecognizeTextRequest(completionHandler: nil)
     var textShare = ""
-    var chat2 = [String]()
+    var keyboradHeight = 0
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +33,35 @@ class ViewController: UIViewController {
         setupTabelViewCell()
         setupUI()
         showActivityIndicatory()
-        
+        keyBoardHeightGet()
     }
+    
     // MARK: - Private method
     
+    func keyBoardHeightGet(){
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        self.wiseChatTextView.becomeFirstResponder()
+
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            keyboradHeight = Int(keyboardRectangle.height)
+            UIView.animate(withDuration: 0.2){
+                self.bottomNSLayoutView.constant  = CGFloat(self.keyboradHeight)
+                self.view.layoutIfNeeded()
+            }
+            print(keyboradHeight)
+
+        }
+    }
+
     func showActivityIndicatory() {
         container.frame = CGRect(x: 0, y: 0, width: 80, height: 75)
         container.backgroundColor = .white
@@ -69,7 +98,6 @@ class ViewController: UIViewController {
                 textString += "\(topCandidate.string)"
 
                 DispatchQueue.main.async { [self] in
-                   
                     wiseChatTextView.text = textString
                     placeHolderTextLabel.isHidden = !wiseChatTextView.text.isEmpty
                     activityView?.stopAnimating()
@@ -96,18 +124,15 @@ class ViewController: UIViewController {
         }
     }
    
-    
     private func setupUI() {
-        wiseChatTextView.layer.borderColor = .init(red: 33/33, green: 200/4, blue: 222/3, alpha: 1)
-        wiseChatTextView.layer.borderWidth = 1
+        wiseChatTextView.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+        wiseChatTextView.layer.borderWidth = 1.5
         wiseChatTextView.layer.cornerRadius = 15
         wiseChatTextView.delegate = self
         placeHolderTextLabel.alpha = 0.5
         wiseChatTextView.delegate = self
         wiseChatTextView.textColor = UIColor.black
         keyboardTapToHide()
-        wiseChatTableView.reloadData()
-
     }
     
     func setupTabelViewCell() {
@@ -137,12 +162,12 @@ class ViewController: UIViewController {
                 let gptText = try await APIService().sendPromtToGPT(promt: prompt)
                 await MainActor.run {
                     chat.append(prompt)
-                    chat2.append(prompt)
                     chat.append(gptText.replacingOccurrences(of: "\n\n", with: ""))
                     wiseChatTableView.reloadData()
+                    scrollToButton()
                 }
             } catch {
-                print("Error")
+                print("Error! Your api key is already used.\nPlease Change your API Key?")
             }
         }
     }
@@ -157,25 +182,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func wiseChatSendButtonAction(_ sender: UIButton) {
-//        wiseChatTextView.resignFirstResponder()
-        if let promptText = wiseChatTextView.text, promptText.count > 0 {
-            fetchChatGPTForResponse(prompt: promptText)
-            placeHolderTextLabel.isHidden = false
-            wiseChatTextView.text = ""
-            
-        } else {
-            print("Please check textfield")
+        wiseChatTextView.resignFirstResponder()
+        let promptText = wiseChatTextView.text
+        self.fetchChatGPTForResponse(prompt: promptText!)
+        UIView.animate(withDuration: 0.3){
+            self.bottomNSLayoutView.constant  = 0
+            self.view.layoutIfNeeded()
         }
+        placeHolderTextLabel.isHidden = false
+        wiseChatTextView.text = ""
     }
     
     @IBAction func settingsButtonAction(_ sender: UIButton) {
         let st = UIStoryboard(name: "Settings", bundle: nil)
         let vc = st.instantiateViewController(withIdentifier: "SettingsViewController")
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
-    
-    
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -190,23 +213,34 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             cell.wiseChatTextLabel?.text = chat[indexPath.row]
             cell.wiseChatTextLabel.textColor = .white
-            cell.bgcellView.backgroundColor = .systemBlue
+            cell.bgcellView.backgroundColor = #colorLiteral(red: 0, green: 0.352879107, blue: 1, alpha: 1)
             cell.bgcellView.layer.cornerRadius = 10
+            cell.bgcellView.layer.shadowColor = UIColor.blue.cgColor
+            cell.bgcellView.layer.shadowOpacity = 1
+            cell.bgcellView.layer.shadowOffset = CGSize.zero
+            cell.bgcellView.layer.shadowRadius = 1.5
+            cell.bgcellView.layer.borderColor = .init(red: 137, green: 207, blue: 240, alpha: 0.1)
+            cell.bgcellView.layer.borderWidth = 1.5
             cell.wiseChatImageView.image = UIImage(named: "man")
             return cell
 
         } else {
             let cell = wiseChatTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WiseChatTableViewCell
             cell.selectionStyle = .none
-            cell.bgcellView.backgroundColor = .systemGray5
-            cell.wiseChatTextLabel?.text = (chat[indexPath.row])
+            cell.bgcellView.backgroundColor = #colorLiteral(red: 0.9143115878, green: 0.9542326331, blue: 0.9878992438, alpha: 1)
+            cell.bgcellView.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+            cell.bgcellView.layer.borderWidth = 1.5
+            cell.bgcellView.layer.shadowColor = UIColor.black.cgColor
+            cell.bgcellView.layer.shadowOpacity = 1
+            cell.bgcellView.layer.shadowOffset = CGSize.zero
+            cell.bgcellView.layer.shadowRadius = 1.5
+            cell.wiseChatTextLabel?.text = chat[indexPath.row]
             cell.wiseChatTextLabel.textColor = .black
             cell.wiseChatImageView.image = UIImage(named: "robot")
             return cell
 
         }
     }
-    
 }
 
 // MARK: Camera UIImageViewController Delegate
@@ -225,6 +259,7 @@ extension ViewController : UITextViewDelegate {
         wiseChatTextView.resignFirstResponder()
         return true
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches,
                            with: event)
@@ -236,22 +271,27 @@ extension ViewController : UITextViewDelegate {
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(hideKeyboard))
         tapGesture.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tapGesture)
+        self.wiseChatTableView.addGestureRecognizer(tapGesture)
     }
     
     @objc private func hideKeyboard() {
+        UIView.animate(withDuration: 0.3){
+            self.bottomNSLayoutView.constant  = 0
+            self.view.layoutIfNeeded()
+        }
         self.view.endEditing(true)
     }
-
     
     func textViewDidChange(_ textView: UITextView) {
 //        print("\(String(describing: wiseChatTextView.text))")
         placeHolderTextLabel.isHidden = !wiseChatTextView.text.isEmpty
     }
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
-        wiseChatTextView.becomeFirstResponder()
-        if chat.count > 0 {
-            scrollToButton()
+        UIView.animate(withDuration: 0.2){ [self] in
+            bottomNSLayoutView.constant  = CGFloat(keyboradHeight)
+            view.layoutIfNeeded()
+            wiseChatTextView.becomeFirstResponder()
         }
     }
 }
