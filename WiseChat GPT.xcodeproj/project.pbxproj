@@ -26,6 +26,13 @@
 		2189F24D29B3A29000C48215 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F24C29B3A29000C48215 /* Define.swift */; };
 		2189F25129B3A46B00C48215 /* FirstLunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F25029B3A46B00C48215 /* FirstLunchViewController.swift */; };
 		2189F25329B3A6D600C48215 /* CustomLunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2189F25229B3A6D600C48215 /* CustomLunch.storyboard */; };
+		21950D5329B4599E00447356 /* TermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D5229B4599E00447356 /* TermViewController.swift */; };
+		21950D5529B459AE00447356 /* Term.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21950D5429B459AE00447356 /* Term.storyboard */; };
+		21950D5729B466EC00447356 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D5629B466EC00447356 /* ExamplesViewController.swift */; };
+		21950D5929B4677B00447356 /* CapabilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D5829B4677B00447356 /* CapabilitiesViewController.swift */; };
+		21950D5B29B467F300447356 /* LimitationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D5A29B467F300447356 /* LimitationsViewController.swift */; };
+		21950D5D29B4776D00447356 /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D5C29B4776D00447356 /* PresentTransition.swift */; };
+		21950D5F29B4778500447356 /* DismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D5E29B4778500447356 /* DismissTransition.swift */; };
 		21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */; };
 		21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */; };
 		21FBD96429B3BE9A003FCE8C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */; };
@@ -73,6 +80,13 @@
 		2189F24C29B3A29000C48215 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		2189F25029B3A46B00C48215 /* FirstLunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLunchViewController.swift; sourceTree = "<group>"; };
 		2189F25229B3A6D600C48215 /* CustomLunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomLunch.storyboard; sourceTree = "<group>"; };
+		21950D5229B4599E00447356 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
+		21950D5429B459AE00447356 /* Term.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Term.storyboard; sourceTree = "<group>"; };
+		21950D5629B466EC00447356 /* ExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesViewController.swift; sourceTree = "<group>"; };
+		21950D5829B4677B00447356 /* CapabilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilitiesViewController.swift; sourceTree = "<group>"; };
+		21950D5A29B467F300447356 /* LimitationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitationsViewController.swift; sourceTree = "<group>"; };
+		21950D5C29B4776D00447356 /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
+		21950D5E29B4778500447356 /* DismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissTransition.swift; sourceTree = "<group>"; };
 		21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +183,7 @@
 		2182488029A9F020001EC910 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				21950D5129B4597D00447356 /* TermOfUseVC */,
 				2189F24729B39EFD00C48215 /* FirstLaunchVC */,
 				21FBD96229B3BE6C003FCE8C /* SecondLaunchVC */,
 				21B97D8A29AD2C1E004FB3F1 /* SettingsVC */,
@@ -226,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				2189F24529B38B7300C48215 /* TypingLoader.swift */,
+				21950D5C29B4776D00447356 /* PresentTransition.swift */,
+				21950D5E29B4778500447356 /* DismissTransition.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -237,6 +254,18 @@
 				2189F25229B3A6D600C48215 /* CustomLunch.storyboard */,
 			);
 			path = FirstLaunchVC;
+			sourceTree = "<group>";
+		};
+		21950D5129B4597D00447356 /* TermOfUseVC */ = {
+			isa = PBXGroup;
+			children = (
+				21950D5229B4599E00447356 /* TermViewController.swift */,
+				21950D5429B459AE00447356 /* Term.storyboard */,
+				21950D5629B466EC00447356 /* ExamplesViewController.swift */,
+				21950D5829B4677B00447356 /* CapabilitiesViewController.swift */,
+				21950D5A29B467F300447356 /* LimitationsViewController.swift */,
+			);
+			path = TermOfUseVC;
 			sourceTree = "<group>";
 		};
 		21B97D8A29AD2C1E004FB3F1 /* SettingsVC */ = {
@@ -375,6 +404,7 @@
 				21FBD96629B3BEB0003FCE8C /* SecondLunch.storyboard in Resources */,
 				210883C929A94A850085FCC8 /* Assets.xcassets in Resources */,
 				210883C429A94A830085FCC8 /* Home.storyboard in Resources */,
+				21950D5529B459AE00447356 /* Term.storyboard in Resources */,
 				21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,18 +430,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21950D5D29B4776D00447356 /* PresentTransition.swift in Sources */,
 				210883C129A94A830085FCC8 /* HomeViewController.swift in Sources */,
+				21950D5729B466EC00447356 /* ExamplesViewController.swift in Sources */,
 				210883BD29A94A830085FCC8 /* AppDelegate.swift in Sources */,
 				2189F25129B3A46B00C48215 /* FirstLunchViewController.swift in Sources */,
+				21950D5F29B4778500447356 /* DismissTransition.swift in Sources */,
 				210883F929A94F660085FCC8 /* WiseChatResponse.swift in Sources */,
+				21950D5B29B467F300447356 /* LimitationsViewController.swift in Sources */,
 				2189F24629B38B7300C48215 /* TypingLoader.swift in Sources */,
 				210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */,
 				21FBD96429B3BE9A003FCE8C /* SecondViewController.swift in Sources */,
+				21950D5929B4677B00447356 /* CapabilitiesViewController.swift in Sources */,
 				210883BF29A94A830085FCC8 /* SceneDelegate.swift in Sources */,
 				210883C729A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld in Sources */,
 				210883F129A94CCC0085FCC8 /* WiseChatTableViewCell.swift in Sources */,
 				210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */,
 				2189F24D29B3A29000C48215 /* Define.swift in Sources */,
+				21950D5329B4599E00447356 /* TermViewController.swift in Sources */,
 				21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

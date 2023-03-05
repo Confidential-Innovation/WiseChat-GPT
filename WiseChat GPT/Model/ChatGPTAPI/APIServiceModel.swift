@@ -15,7 +15,7 @@ enum APIError: Error {
 
 class APIService {
     
-    let apiKey = "your api key"
+    let apiKey = "your api keys paste"
     
     func fetchImageForPrompt(_ prompt: String) async throws -> UIImage {
         let fetchImageURL = "https://api.openai.com/v1/images/generations"

@@ -20,6 +20,35 @@ class SettingsViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func contactActionButton(_ sender: UIButton) {
+    }
     
+    @IBAction func writeAReviewActionButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func privactyPolicyActionButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func shareAppActionButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func TermsOfUseActionButton(_ sender: UIButton) {
+        let st = UIStoryboard(name: "Term", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "TermViewController") as! TermViewController
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = self
+        self.present(vc, animated: true)
+    }
+}
 
+
+extension SettingsViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentTransition()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissTransition()
+    }
 }
