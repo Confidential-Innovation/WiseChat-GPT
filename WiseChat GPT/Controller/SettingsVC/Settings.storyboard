@@ -24,14 +24,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pu-Gc-4jx" userLabel="topView">
                                         <rect key="frame" x="0.0" y="2" width="393" height="36.333333333333336"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKY-F0-Mkf">
-                                                <rect key="frame" x="147" y="-9.3333333333333357" width="99" height="54.666666666666664"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKY-F0-Mkf">
+                                                <rect key="frame" x="151" y="-7" width="91" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-il-uWC">
-                                                <rect key="frame" x="16" y="7" width="17.666666666666671" height="22"/>
+                                                <rect key="frame" x="20" y="7.3333333333333304" width="19.666666666666671" height="21.666666666666671"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="xmark" catalog="system"/>
@@ -53,9 +53,11 @@
                                             <constraint firstAttribute="trailing" secondItem="iNu-o0-pXE" secondAttribute="trailing" id="3pe-wy-Vg0"/>
                                             <constraint firstItem="EN8-il-uWC" firstAttribute="centerY" secondItem="zKY-F0-Mkf" secondAttribute="centerY" id="54j-u6-eOc"/>
                                             <constraint firstItem="zKY-F0-Mkf" firstAttribute="centerY" secondItem="5Pu-Gc-4jx" secondAttribute="centerY" id="7Sr-qj-KfB"/>
-                                            <constraint firstItem="EN8-il-uWC" firstAttribute="leading" secondItem="5Pu-Gc-4jx" secondAttribute="leading" constant="16" id="dZy-fn-QNr"/>
+                                            <constraint firstItem="EN8-il-uWC" firstAttribute="leading" secondItem="5Pu-Gc-4jx" secondAttribute="leading" constant="20" id="dZy-fn-QNr"/>
                                             <constraint firstItem="iNu-o0-pXE" firstAttribute="leading" secondItem="5Pu-Gc-4jx" secondAttribute="leading" id="fVu-lF-vPU"/>
                                             <constraint firstItem="zKY-F0-Mkf" firstAttribute="centerX" secondItem="5Pu-Gc-4jx" secondAttribute="centerX" id="g6e-NQ-6bf"/>
+                                            <constraint firstItem="EN8-il-uWC" firstAttribute="width" secondItem="5Pu-Gc-4jx" secondAttribute="width" multiplier="0.05" id="l0R-ho-pNI"/>
+                                            <constraint firstItem="EN8-il-uWC" firstAttribute="height" secondItem="5Pu-Gc-4jx" secondAttribute="height" multiplier="0.6" id="xaY-3r-7sw"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aq-Cv-y8z" userLabel="termView">

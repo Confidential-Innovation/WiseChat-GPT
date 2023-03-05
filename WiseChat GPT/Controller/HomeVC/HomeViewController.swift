@@ -192,9 +192,11 @@ class HomeViewController: UIViewController {
             } catch {
                 print("Error! Your api key is already used.\nPlease Change your API Key?")
                 typingLoaderView.isHidden = true
-                typingLoaderView.isHidden = true
                 wiseChatTableView.alpha = 1.0
-                wiseChatTableView.reloadData()
+                let alert = UIAlertController(title: "API Key Alert!", message: "Error! Your api key is already used.\nPlease Change your API Key?", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                alert.view.tintColor = .systemPink
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -233,6 +235,20 @@ class HomeViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
+    
+    @IBAction func noteActionButton(_ sender: UIButton) {
+        let st = UIStoryboard(name: "Term", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "TermViewController") as! TermViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func historyActionButton(_ sender: UIButton) {
+        let st = UIStoryboard(name: "History", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
 }
 
 /// UITableView Delegate and DataSource
@@ -256,6 +272,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.bgcellView.layer.shadowRadius = 1.5
             cell.bgcellView.layer.borderColor = .init(red: 137, green: 207, blue: 240, alpha: 0.1)
             cell.bgcellView.layer.borderWidth = 3
+            cell.threeDotsButton.isHidden = true
+            cell.threeDotsImageView.isHidden = true
             cell.wiseChatImageView.image = UIImage(named: "man")
             return cell
 
@@ -272,6 +290,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.wiseChatTextLabel?.text = chat[indexPath.row]
             cell.wiseChatTextLabel.textColor = .black
             cell.wiseChatImageView.image = UIImage(named: "robot")
+            cell.threeDotsButton.isHidden = false
+            cell.threeDotsImageView.isHidden = false
             return cell
         }
     }

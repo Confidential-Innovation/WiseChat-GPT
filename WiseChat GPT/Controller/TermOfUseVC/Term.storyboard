@@ -24,17 +24,17 @@
                                         <rect key="frame" x="86.333333333333329" y="99.333333333333343" width="220.33333333333337" height="52"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rWG-3w-s3m">
-                                                <rect key="frame" x="0.0" y="10.333333333333325" width="25" height="32"/>
+                                                <rect key="frame" x="0.0" y="10.333333333333325" width="27" height="32"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="1IG-uG-aW7"/>
-                                                    <constraint firstAttribute="width" constant="25" id="6MC-GZ-Cc3"/>
+                                                    <constraint firstAttribute="width" constant="27" id="6MC-GZ-Cc3"/>
                                                 </constraints>
                                                 <imageReference key="image" image="sun.max" catalog="system" symbolScale="large"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y26-aj-u8v">
-                                                <rect key="frame" x="45.000000000000021" y="0.0" width="77.333333333333314" height="52"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="47.000000000000014" y="0.0" width="80.999999999999986" height="52"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -73,17 +73,17 @@
                                         <rect key="frame" x="86.666666666666686" y="170.66666666666666" width="220" height="52"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lxx-WS-WdI">
-                                                <rect key="frame" x="0.0" y="9.6666666666666821" width="25" height="33.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="9.6666666666666821" width="27" height="33.333333333333329"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="0E4-V1-pBM"/>
+                                                    <constraint firstAttribute="width" constant="27" id="0E4-V1-pBM"/>
                                                     <constraint firstAttribute="height" constant="25" id="d4n-QN-kzA"/>
                                                 </constraints>
                                                 <imageReference key="image" image="bolt" catalog="system" symbolScale="large"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capabilities" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RZ-x1-v7H">
-                                                <rect key="frame" x="44.999999999999993" y="0.0" width="93.333333333333314" height="52"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="46.999999999999979" y="0.0" width="98.666666666666686" height="52"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -128,17 +128,17 @@ CapabilitiesView</string>
                                         <rect key="frame" x="86.666666666666686" y="251" width="220" height="52"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vZW-4r-B6G">
-                                                <rect key="frame" x="0.0" y="11.333333333333314" width="25" height="29"/>
+                                                <rect key="frame" x="0.0" y="11.333333333333314" width="27" height="29"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="TMM-oY-fCa"/>
-                                                    <constraint firstAttribute="width" constant="25" id="nnX-bz-fUD"/>
+                                                    <constraint firstAttribute="width" constant="27" id="nnX-bz-fUD"/>
                                                 </constraints>
                                                 <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limitations" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMH-Nd-7G1">
-                                                <rect key="frame" x="44.999999999999979" y="0.0" width="87.666666666666686" height="52"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="46.999999999999986" y="0.0" width="93.000000000000014" height="52"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -174,13 +174,13 @@ CapabilitiesView</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Terms" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytl-5p-39p">
-                                        <rect key="frame" x="134.33333333333334" y="0.0" width="124.66666666666666" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <rect key="frame" x="141.33333333333334" y="0.0" width="110.33333333333334" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eZ-dl-FXl">
-                                        <rect key="frame" x="20" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="20" y="-2" width="31.333333333333329" height="30.333333333333332"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
@@ -193,9 +193,9 @@ CapabilitiesView</string>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="7eZ-dl-FXl" firstAttribute="height" secondItem="9gy-o3-HJ8" secondAttribute="height" multiplier="0.0395257" id="5yj-Oy-Qc2"/>
+                                    <constraint firstItem="7eZ-dl-FXl" firstAttribute="height" secondItem="9gy-o3-HJ8" secondAttribute="height" multiplier="0.04" id="5yj-Oy-Qc2"/>
                                     <constraint firstItem="4TL-0c-gT6" firstAttribute="height" secondItem="9gy-o3-HJ8" secondAttribute="height" multiplier="0.0685315" id="8T8-uE-VgL"/>
-                                    <constraint firstItem="7eZ-dl-FXl" firstAttribute="width" secondItem="9gy-o3-HJ8" secondAttribute="width" multiplier="0.0763359" id="AJd-II-Xfq"/>
+                                    <constraint firstItem="7eZ-dl-FXl" firstAttribute="width" secondItem="9gy-o3-HJ8" secondAttribute="width" multiplier="0.08" id="AJd-II-Xfq"/>
                                     <constraint firstItem="4TL-0c-gT6" firstAttribute="centerX" secondItem="9gy-o3-HJ8" secondAttribute="centerX" id="Bih-XO-Q94"/>
                                     <constraint firstItem="Ytl-5p-39p" firstAttribute="top" secondItem="9gy-o3-HJ8" secondAttribute="top" id="JJS-eP-M1b"/>
                                     <constraint firstItem="NLW-kH-uwD" firstAttribute="height" secondItem="9gy-o3-HJ8" secondAttribute="height" multiplier="0.0685315" id="LMq-TR-gbA"/>
@@ -239,25 +239,25 @@ CapabilitiesView</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrl-cn-mxW" userLabel="bgView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qv-Oj-7c4">
-                                        <rect key="frame" x="92" y="5" width="209" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example Questions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qv-Oj-7c4">
+                                        <rect key="frame" x="108.66666666666669" y="5" width="176" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(i)  Explain quantum computing in simple terms." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rGN-xp-ivR">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(i)  Explain quantum computing in simple terms." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rGN-xp-ivR">
                                         <rect key="frame" x="30.666666666666657" y="106.33333333333334" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(ii)  Got any creative ideas for a 10 year old’s birthday?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w9S-mB-44n">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(ii)  Got any creative ideas for a 10 year old’s birthday?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w9S-mB-44n">
                                         <rect key="frame" x="30.666666666666657" y="204.33333333333331" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(iii)  How do I make an HTTP request in Javascript?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3KQ-5P-xne">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(iii)  How do I make an HTTP request in Javascript?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3KQ-5P-xne">
                                         <rect key="frame" x="30.666666666666657" y="302.33333333333331" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -283,7 +283,7 @@ CapabilitiesView</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-cg-RVe">
-                                <rect key="frame" x="20" y="63.666666666666657" width="30" height="30"/>
+                                <rect key="frame" x="20" y="61" width="30" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
@@ -295,7 +295,7 @@ CapabilitiesView</string>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o15-pQ-y12"/>
-                        <color key="backgroundColor" red="0.088443023989999994" green="0.082142714539999995" blue="0.080838719820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.1843137443" green="0.19215688110000001" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Ho-cg-RVe" firstAttribute="centerY" secondItem="3qv-Oj-7c4" secondAttribute="centerY" id="3it-65-Jk6"/>
                             <constraint firstItem="6Ho-cg-RVe" firstAttribute="height" secondItem="qrl-cn-mxW" secondAttribute="height" multiplier="0.0395257" id="5CA-55-k1B"/>
@@ -323,32 +323,32 @@ CapabilitiesView</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUL-HK-1jF" userLabel="bgView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capability Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlc-ZU-4mO">
-                                        <rect key="frame" x="80.000000000000014" y="5" width="233.33333333333337" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capability Conditions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlc-ZU-4mO">
+                                        <rect key="frame" x="98.666666666666686" y="5" width="196" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(i) Remembers what user said earlier in the conversation." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iWs-Ec-ew7">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(i) Remembers what user said earlier in the conversation." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iWs-Ec-ew7">
                                         <rect key="frame" x="30.666666666666657" y="106.33333333333334" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(ii) Allows user to provide follow-up corrections." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eCP-Mq-ApA">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(ii) Allows user to provide follow-up corrections." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eCP-Mq-ApA">
                                         <rect key="frame" x="30.666666666666657" y="204.33333333333331" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(iii) Trained to decline inappropriate requests." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mc5-gc-b0Q">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(iii) Trained to decline inappropriate requests." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mc5-gc-b0Q">
                                         <rect key="frame" x="30.666666666666657" y="302.33333333333331" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gc-iy-T5u">
-                                        <rect key="frame" x="20" y="4.6666666666666643" width="30" height="30"/>
+                                        <rect key="frame" x="20" y="2" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="EUd-M8-vNy"/>
                                             <constraint firstAttribute="width" constant="30" id="JrX-GL-OqJ"/>
@@ -385,7 +385,7 @@ CapabilitiesView</string>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qTd-aD-BqM"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1843137443" green="0.19215688110000001" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="MUL-HK-1jF" firstAttribute="trailing" secondItem="qTd-aD-BqM" secondAttribute="trailing" id="7Tc-NQ-lgJ"/>
                             <constraint firstItem="MUL-HK-1jF" firstAttribute="leading" secondItem="qTd-aD-BqM" secondAttribute="leading" id="Kqu-r6-A4A"/>
@@ -409,32 +409,32 @@ CapabilitiesView</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-L4-J0I" userLabel="bgView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limitations Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjI-hu-hbW">
-                                        <rect key="frame" x="92.666666666666686" y="5" width="208" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limitations Answer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjI-hu-hbW">
+                                        <rect key="frame" x="109" y="5" width="175" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(i) May occasionally generate incorrect information." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-c8-7RK">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(i) May occasionally generate incorrect information." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-c8-7RK">
                                         <rect key="frame" x="30.666666666666657" y="106.33333333333334" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(ii) May occasionally create harmful instructions or biased content." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="haL-Fb-oYb">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(ii) May occasionally create harmful instructions or biased content." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="haL-Fb-oYb">
                                         <rect key="frame" x="30.666666666666657" y="204.33333333333331" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(iii)  Limited knowledge of world and events after 2021." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KnO-NI-EIE">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(iii)  Limited knowledge of world and events after 2021." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KnO-NI-EIE">
                                         <rect key="frame" x="30.666666666666657" y="302.33333333333331" width="332" height="63"/>
                                         <color key="textColor" red="0.96379615220000003" green="0.98948931409999996" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi2-wi-upd">
-                                        <rect key="frame" x="20" y="4.6666666666666643" width="30" height="30"/>
+                                        <rect key="frame" x="20" y="2" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="IyU-PI-cbJ"/>
                                             <constraint firstAttribute="width" constant="30" id="ZsN-76-jrA"/>
@@ -471,7 +471,7 @@ CapabilitiesView</string>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DtO-ee-f3t"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1843137443" green="0.19215688110000001" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jC3-L4-J0I" secondAttribute="trailing" id="E4D-DO-PbY"/>
                             <constraint firstItem="jC3-L4-J0I" firstAttribute="leading" secondItem="DtO-ee-f3t" secondAttribute="leading" id="LV3-Et-BYx"/>
@@ -486,7 +486,7 @@ CapabilitiesView</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SM-4O-Cag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6028.2442748091598" y="-14.084507042253522"/>
+            <point key="canvasLocation" x="6013" y="-2"/>
         </scene>
     </scenes>
     <resources>

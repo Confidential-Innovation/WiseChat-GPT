@@ -14,6 +14,10 @@ class WiseChatTableViewCell: UITableViewCell {
     
     @IBOutlet weak var wiseChatImageView: UIImageView!
     
+    @IBOutlet weak var threeDotsButton: UIButton!
+    
+    @IBOutlet weak var threeDotsImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
