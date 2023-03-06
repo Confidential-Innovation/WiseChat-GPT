@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wise robot" translatesAutoresizingMaskIntoConstraints="NO" id="2YT-BC-xxo">
-                                <rect key="frame" x="0.0" y="255.66666666666666" width="393" height="340.66666666666674"/>
+                                <rect key="frame" x="0.0" y="225.66666666666666" width="393" height="340.66666666666674"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="OSy-A3-ffY">
-                                <rect key="frame" x="20" y="726.33333333333337" width="353" height="7.6666666666666288"/>
+                                <rect key="frame" x="20" y="696.33333333333337" width="353" height="7.6666666666666288"/>
                                 <color key="tintColor" red="1" green="0.3875518007" blue="0.27470855929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.088443023989999994" green="0.082142714539999995" blue="0.080838719820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="2YT-BC-xxo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="E6t-p4-yx8"/>
+                            <constraint firstItem="2YT-BC-xxo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-30" id="E6t-p4-yx8"/>
                             <constraint firstItem="OSy-A3-ffY" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.009" id="Lji-gB-aPv"/>
                             <constraint firstItem="2YT-BC-xxo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="abR-QD-VZU"/>
                             <constraint firstItem="2YT-BC-xxo" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.4" id="dgg-pd-YzV"/>

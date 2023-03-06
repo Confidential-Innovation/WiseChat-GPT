@@ -42,7 +42,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-Ib-DQc" userLabel="settingButton">
-                                                <rect key="frame" x="352" y="6.6666666666666696" width="25" height="24.333333333333329"/>
+                                                <rect key="frame" x="350.66666666666669" y="6.3333333333333268" width="26.333333333333314" height="25.333333333333329"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -53,7 +53,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwF-Bz-99U" userLabel="settingButton">
-                                                <rect key="frame" x="303.33333333333331" y="7.6666666666666732" width="23.666666666666686" height="22.666666666666671"/>
+                                                <rect key="frame" x="302" y="0.0" width="23.666666666666686" height="38"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -67,18 +67,18 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="ou1-Xa-xbR" firstAttribute="height" secondItem="JVM-pl-akU" secondAttribute="height" multiplier="0.724138" id="0Lp-eA-8oL"/>
-                                            <constraint firstItem="ciK-Ib-DQc" firstAttribute="width" secondItem="JVM-pl-akU" secondAttribute="width" multiplier="0.064" id="0qL-oG-eD2"/>
+                                            <constraint firstItem="ciK-Ib-DQc" firstAttribute="width" secondItem="JVM-pl-akU" secondAttribute="width" multiplier="0.067" id="0qL-oG-eD2"/>
                                             <constraint firstItem="ou1-Xa-xbR" firstAttribute="centerY" secondItem="JVM-pl-akU" secondAttribute="centerY" id="100-Ce-Unv"/>
                                             <constraint firstItem="ou1-Xa-xbR" firstAttribute="centerX" secondItem="JVM-pl-akU" secondAttribute="centerX" id="8me-gZ-yhj"/>
                                             <constraint firstItem="CwF-Bz-99U" firstAttribute="centerY" secondItem="ou1-Xa-xbR" secondAttribute="centerY" id="98c-NG-iRm"/>
                                             <constraint firstAttribute="trailing" secondItem="ciK-Ib-DQc" secondAttribute="trailing" constant="16" id="BkU-QP-Tir"/>
                                             <constraint firstItem="INu-cs-LAp" firstAttribute="height" secondItem="JVM-pl-akU" secondAttribute="height" multiplier="1:1" id="CDp-cN-7Cj"/>
-                                            <constraint firstItem="CwF-Bz-99U" firstAttribute="height" secondItem="JVM-pl-akU" secondAttribute="height" multiplier="0.6" id="PxB-9a-QMx"/>
+                                            <constraint firstItem="CwF-Bz-99U" firstAttribute="height" secondItem="JVM-pl-akU" secondAttribute="height" multiplier="1:1" id="PxB-9a-QMx"/>
                                             <constraint firstItem="CwF-Bz-99U" firstAttribute="width" secondItem="JVM-pl-akU" secondAttribute="width" multiplier="0.06" id="YkB-GG-NsI"/>
                                             <constraint firstItem="INu-cs-LAp" firstAttribute="centerY" secondItem="JVM-pl-akU" secondAttribute="centerY" id="aYT-Pb-Ztz"/>
                                             <constraint firstItem="ciK-Ib-DQc" firstAttribute="centerY" secondItem="JVM-pl-akU" secondAttribute="centerY" id="iDS-Xf-Wv9"/>
                                             <constraint firstItem="INu-cs-LAp" firstAttribute="width" secondItem="JVM-pl-akU" secondAttribute="width" multiplier="0.09" id="imz-ZH-whe"/>
-                                            <constraint firstItem="ciK-Ib-DQc" firstAttribute="height" secondItem="JVM-pl-akU" secondAttribute="height" multiplier="0.64" id="p4B-Vo-Wij"/>
+                                            <constraint firstItem="ciK-Ib-DQc" firstAttribute="height" secondItem="JVM-pl-akU" secondAttribute="height" multiplier="0.66" id="p4B-Vo-Wij"/>
                                             <constraint firstItem="INu-cs-LAp" firstAttribute="leading" secondItem="JVM-pl-akU" secondAttribute="leading" constant="16" id="vGn-wC-xfw"/>
                                             <constraint firstItem="ciK-Ib-DQc" firstAttribute="leading" secondItem="CwF-Bz-99U" secondAttribute="trailing" constant="25" id="vJx-Oy-Ssm"/>
                                         </constraints>
@@ -135,7 +135,7 @@
                                                     <action selector="wiseChatScannerActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="erZ-KU-4fH"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-n3-ubE">
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-n3-ubE">
                                                 <rect key="frame" x="345" y="13.333333333333258" width="34" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="34" id="dsZ-JK-SYo"/>

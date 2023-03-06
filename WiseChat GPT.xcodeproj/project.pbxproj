@@ -35,6 +35,9 @@
 		21950D5F29B4778500447356 /* DismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D5E29B4778500447356 /* DismissTransition.swift */; };
 		21950D6229B491CF00447356 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D6129B491CF00447356 /* HistoryViewController.swift */; };
 		21950D6429B491E200447356 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21950D6329B491E200447356 /* History.storyboard */; };
+		21950D6829B4AE9B00447356 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D6629B4AE9B00447356 /* HistoryTableViewCell.swift */; };
+		21950D6929B4AE9B00447356 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21950D6729B4AE9B00447356 /* HistoryTableViewCell.xib */; };
+		21950D6B29B4C46800447356 /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950D6A29B4C46800447356 /* MyLabel.swift */; };
 		21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */; };
 		21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */; };
 		21FBD96429B3BE9A003FCE8C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */; };
@@ -91,6 +94,9 @@
 		21950D5E29B4778500447356 /* DismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissTransition.swift; sourceTree = "<group>"; };
 		21950D6129B491CF00447356 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		21950D6329B491E200447356 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		21950D6629B4AE9B00447356 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		21950D6729B4AE9B00447356 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		21950D6A29B4C46800447356 /* MyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
 		21B97D8B29AD2DAE004FB3F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		21B97D8D29AD2DCD004FB3F1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +255,7 @@
 				2189F24529B38B7300C48215 /* TypingLoader.swift */,
 				21950D5C29B4776D00447356 /* PresentTransition.swift */,
 				21950D5E29B4778500447356 /* DismissTransition.swift */,
+				21950D6A29B4C46800447356 /* MyLabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -286,6 +293,8 @@
 		21950D6529B4988600447356 /* HistoryTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				21950D6629B4AE9B00447356 /* HistoryTableViewCell.swift */,
+				21950D6729B4AE9B00447356 /* HistoryTableViewCell.xib */,
 			);
 			path = HistoryTableViewCell;
 			sourceTree = "<group>";
@@ -426,6 +435,7 @@
 				21FBD96629B3BEB0003FCE8C /* SecondLunch.storyboard in Resources */,
 				210883C929A94A850085FCC8 /* Assets.xcassets in Resources */,
 				210883C429A94A830085FCC8 /* Home.storyboard in Resources */,
+				21950D6929B4AE9B00447356 /* HistoryTableViewCell.xib in Resources */,
 				21950D5529B459AE00447356 /* Term.storyboard in Resources */,
 				21B97D8E29AD2DCD004FB3F1 /* Settings.storyboard in Resources */,
 				21950D6429B491E200447356 /* History.storyboard in Resources */,
@@ -462,6 +472,7 @@
 				21950D5F29B4778500447356 /* DismissTransition.swift in Sources */,
 				210883F929A94F660085FCC8 /* WiseChatResponse.swift in Sources */,
 				21950D5B29B467F300447356 /* LimitationsViewController.swift in Sources */,
+				21950D6829B4AE9B00447356 /* HistoryTableViewCell.swift in Sources */,
 				2189F24629B38B7300C48215 /* TypingLoader.swift in Sources */,
 				210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */,
 				21FBD96429B3BE9A003FCE8C /* SecondViewController.swift in Sources */,
@@ -472,6 +483,7 @@
 				210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */,
 				2189F24D29B3A29000C48215 /* Define.swift in Sources */,
 				21950D5329B4599E00447356 /* TermViewController.swift in Sources */,
+				21950D6B29B4C46800447356 /* MyLabel.swift in Sources */,
 				21B97D8C29AD2DAE004FB3F1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

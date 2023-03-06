@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-0z-lN0">
-                                <rect key="frame" x="54" y="5" width="217" height="34"/>
+                                <rect key="frame" x="54" y="5" width="242" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Lyn-6t-ANA"/>
                                 </constraints>
@@ -36,40 +36,12 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDT-GX-DwE" userLabel="dotsView">
-                                <rect key="frame" x="279" y="10" width="25" height="22"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="three dots" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-7Q-uNT">
-                                        <rect key="frame" x="0.0" y="0.0" width="25" height="22"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTF-RZ-R9j">
-                                        <rect key="frame" x="0.0" y="0.0" width="25" height="22"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="vTF-RZ-R9j" secondAttribute="trailing" id="20q-cz-b3X"/>
-                                    <constraint firstAttribute="height" constant="22" id="2jc-78-4x0"/>
-                                    <constraint firstAttribute="trailing" secondItem="oBa-7Q-uNT" secondAttribute="trailing" id="7yO-z1-EE6"/>
-                                    <constraint firstAttribute="bottom" secondItem="oBa-7Q-uNT" secondAttribute="bottom" id="ACm-PO-ihz"/>
-                                    <constraint firstItem="vTF-RZ-R9j" firstAttribute="leading" secondItem="iDT-GX-DwE" secondAttribute="leading" id="KVU-rp-dno"/>
-                                    <constraint firstItem="oBa-7Q-uNT" firstAttribute="leading" secondItem="iDT-GX-DwE" secondAttribute="leading" id="O1B-eg-pxt"/>
-                                    <constraint firstItem="vTF-RZ-R9j" firstAttribute="top" secondItem="iDT-GX-DwE" secondAttribute="top" id="gH7-E9-K87"/>
-                                    <constraint firstAttribute="width" constant="25" id="nQd-DD-EIa"/>
-                                    <constraint firstItem="oBa-7Q-uNT" firstAttribute="top" secondItem="iDT-GX-DwE" secondAttribute="top" id="qLy-dN-hFE"/>
-                                    <constraint firstAttribute="bottom" secondItem="vTF-RZ-R9j" secondAttribute="bottom" id="wRr-qi-I3l"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="k50-c4-Fwy" firstAttribute="top" secondItem="yfY-0z-lN0" secondAttribute="top" id="0pY-LE-Jnk"/>
-                            <constraint firstItem="iDT-GX-DwE" firstAttribute="top" secondItem="yfY-0z-lN0" secondAttribute="top" constant="5" id="KwD-oH-jh7"/>
                             <constraint firstItem="yfY-0z-lN0" firstAttribute="top" secondItem="9LR-MC-WZK" secondAttribute="top" constant="5" id="VQu-05-xHe"/>
-                            <constraint firstAttribute="trailing" secondItem="iDT-GX-DwE" secondAttribute="trailing" id="hYM-h1-7uo"/>
-                            <constraint firstItem="iDT-GX-DwE" firstAttribute="leading" secondItem="yfY-0z-lN0" secondAttribute="trailing" constant="8" id="k3a-64-vd0"/>
+                            <constraint firstAttribute="trailing" secondItem="yfY-0z-lN0" secondAttribute="trailing" constant="8" id="kJ4-Gf-5OD"/>
                             <constraint firstItem="yfY-0z-lN0" firstAttribute="leading" secondItem="k50-c4-Fwy" secondAttribute="trailing" constant="15" id="syd-Yb-ldw"/>
                             <constraint firstItem="k50-c4-Fwy" firstAttribute="leading" secondItem="9LR-MC-WZK" secondAttribute="leading" constant="5" id="tIp-zY-ham"/>
                             <constraint firstAttribute="bottom" secondItem="yfY-0z-lN0" secondAttribute="bottom" constant="5" id="tYC-bm-mPl"/>
@@ -87,15 +59,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bgcellView" destination="9LR-MC-WZK" id="a13-Y6-ZDK"/>
-                <outlet property="threeDotsButton" destination="vTF-RZ-R9j" id="pYo-Yj-MGk"/>
-                <outlet property="threeDotsImageView" destination="oBa-7Q-uNT" id="Bpt-3A-Pqb"/>
                 <outlet property="wiseChatImageView" destination="k50-c4-Fwy" id="xsd-wD-dPY"/>
                 <outlet property="wiseChatTextLabel" destination="yfY-0z-lN0" id="nSq-HN-b0A"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="25.35211267605634"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="three dots" width="122" height="122"/>
-    </resources>
 </document>

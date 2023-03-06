@@ -14,10 +14,10 @@ class FirstLunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UIView.animate(withDuration: 2.5, animations: { () -> Void in
+        UIView.animate(withDuration: 1.5, animations: { () -> Void in
             self.startProgressBar.setProgress(1.0, animated: true)
         })
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.8){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
             if let intoVC = loadVCfromStoryBoard(name: "SecondLunch", identifier: "SecondViewController") as? SecondViewController {
                 intoVC.modalPresentationStyle = .fullScreen
                 self.present(intoVC, animated: true)

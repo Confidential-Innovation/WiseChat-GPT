@@ -13,6 +13,11 @@ class TermViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    /// Stausbar color change
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent //.default for black style
+    }
 
     @IBAction func exampleActionButton(_ sender: UIButton) {
         let st = UIStoryboard(name: "Term", bundle: nil)

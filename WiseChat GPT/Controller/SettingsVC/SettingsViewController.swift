@@ -12,8 +12,10 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    
+    /// Stausbar color change
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent //.default for black style
     }
     
     @IBAction func crossButton(_ sender: UIButton) {

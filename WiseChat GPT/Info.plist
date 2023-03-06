@@ -23,6 +23,12 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Please access me camera open.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>used</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Please access to speech recognition</string>
+	<key>NSSiriUsageDescription</key>
+	<string>access to siri useage</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

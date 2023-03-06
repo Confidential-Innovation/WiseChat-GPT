@@ -8,6 +8,7 @@
 import UIKit
 import Vision
 import AVFoundation
+import AVFAudio
 
 class HomeViewController: UIViewController {
 
@@ -16,17 +17,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var placeHolderTextLabel: UILabel!
     @IBOutlet weak var bottomNSLayoutView: NSLayoutConstraint!
     @IBOutlet weak var bgView: UIView!
-    
+
     var activityView: UIActivityIndicatorView?
     let scanLoderView: UIView = UIView()
     let typingLoaderView: UIView = UIView()
     var chat = [String]()
     var request = VNRecognizeTextRequest(completionHandler: nil)
     var textShare = ""
+    var speakerText = ""
+
     var keyboradHeight = 0
     let animation = DotsAnimation()
-    
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class HomeViewController: UIViewController {
         keyBoardHeightGet()
         TypingLoaderAnimation()
     }
+    
     
     // MARK: - Private method
     
@@ -140,6 +142,72 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func tableViewCellClickAlertMenuOption() {
+        
+        let optionMenu = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        let titleAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 22)!, NSAttributedString.Key.foregroundColor: UIColor.black]
+        let titleString = NSAttributedString(string: "Details", attributes: titleAttributes)
+        optionMenu.setValue(titleString, forKey: "attributedTitle")
+        
+        let speakerAction = UIAlertAction(title: "Speaker", style: .default, handler: { [self]
+            (alert: UIAlertAction!) -> Void in
+            let utterance = AVSpeechUtterance(string: speakerText)
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-AI")
+            let synth = AVSpeechSynthesizer()
+            synth.speak(utterance)
+
+   
+        })
+        let speakerImage = UIImage(systemName: "speaker.2")
+        if let speakerImage = speakerImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 26)) {
+            speakerAction.setValue(speakerImage, forKey: "image")
+        }
+          
+        let copyAction = UIAlertAction(title: "Copy", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+        })
+        
+        let copyImage = UIImage(systemName: "doc.on.doc")
+        if let copyImage = copyImage?.imageWithSize(scaledToSize: CGSize(width: 30, height: 30)) {
+            copyAction.setValue(copyImage, forKey: "image")
+        }
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+        })
+        
+        let saveImage = UIImage(systemName: "text.badge.plus")
+        if let saveImage = saveImage?.imageWithSize(scaledToSize: CGSize(width: 30, height: 28)) {
+            saveAction.setValue(saveImage, forKey: "image")
+        }
+        
+        let shareAction = UIAlertAction(title: "Share", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+        })
+        let shareImage = UIImage(systemName: "arrow.up.square")
+        if let shareImage = shareImage?.imageWithSize(scaledToSize: CGSize(width: 30, height: 28)) {
+            shareAction.setValue(shareImage, forKey: "image")
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+        })
+        
+        optionMenu.addAction(speakerAction)
+        optionMenu.addAction(copyAction)
+        optionMenu.addAction(saveAction)
+        optionMenu.addAction(shareAction)
+        optionMenu.addAction(cancelAction)
+        optionMenu.view.tintColor = .black
+        self.present(optionMenu, animated: true, completion: nil)
+
+    }
+
+    
     /// Private UI Setup
     private func setupUI() {
         wiseChatTextView.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
@@ -183,7 +251,9 @@ class HomeViewController: UIViewController {
                 let gptText = try await APIService().sendPromtToGPT(promt: prompt)
                 await MainActor.run {
                     chat.append(prompt)
+                    historyArray.append(prompt)
                     chat.append(gptText.replacingOccurrences(of: "\n\n", with: ""))
+                    speakerText.append(gptText)
                     typingLoaderView.isHidden = true
                     wiseChatTableView.alpha = 1.0
                     wiseChatTableView.reloadData()
@@ -249,15 +319,16 @@ class HomeViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
+    
 }
 
 /// UITableView Delegate and DataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chat.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row % 2 == 0 {
             let cell = wiseChatTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WiseChatTableViewCell
@@ -272,11 +343,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.bgcellView.layer.shadowRadius = 1.5
             cell.bgcellView.layer.borderColor = .init(red: 137, green: 207, blue: 240, alpha: 0.1)
             cell.bgcellView.layer.borderWidth = 3
-            cell.threeDotsButton.isHidden = true
-            cell.threeDotsImageView.isHidden = true
+            //            cell.threeDotsButton.isHidden = true
+            //            cell.threeDotsImageView.isHidden = true
+            
+            
             cell.wiseChatImageView.image = UIImage(named: "man")
             return cell
-
+            
         } else {
             let cell = wiseChatTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WiseChatTableViewCell
             cell.selectionStyle = .none
@@ -287,14 +360,54 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.bgcellView.layer.shadowOpacity = 1
             cell.bgcellView.layer.shadowOffset = CGSize.zero
             cell.bgcellView.layer.shadowRadius = 3
+            cell.bgcellView.layer.cornerRadius = 15
             cell.wiseChatTextLabel?.text = chat[indexPath.row]
             cell.wiseChatTextLabel.textColor = .black
             cell.wiseChatImageView.image = UIImage(named: "robot")
-            cell.threeDotsButton.isHidden = false
-            cell.threeDotsImageView.isHidden = false
             return cell
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row % 2 == 1 {
+            tableViewCellClickAlertMenuOption()
+        }
+    }
+    
+    
+    //    MARK: TableView tapped to contextMenu
+/*
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        // 1
+        var index = 0
+        if indexPath.row % 2 == 0 {
+            index = indexPath.row
+
+        }
+        // 2
+        let identifier = "\(index)" as NSString
+
+        return UIContextMenuConfiguration(
+            identifier: identifier,
+            previewProvider: nil) { _ in
+                //
+                let mapAction = UIAction(
+                    title: "View map",
+                    image: UIImage(systemName: "map")) { _ in
+                    }
+
+                // 4
+                let shareAction = UIAction(
+                    title: "Sshare",
+                    image: UIImage(systemName: "square.and.arrow.up")) { _ in
+                    }
+
+                // 5
+                return UIMenu(title: "", image: nil, children: [mapAction, shareAction])
+            }
+    }
+ */
+    
 }
 
 // MARK: Camera UIImageViewController Delegate
@@ -356,3 +469,26 @@ extension HomeViewController : UITextViewDelegate {
         }
     }
 }
+
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentTransition()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissTransition()
+    }
+}
+
+extension UIImage {
+    func imageWithSize(scaledToSize newSize: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+}
+
