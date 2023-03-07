@@ -8,9 +8,12 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var settingRobotGifView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingRobotGifPlay()
     }
     
     /// Stausbar color change
@@ -40,6 +43,10 @@ class SettingsViewController: UIViewController {
         vc.modalPresentationStyle = .custom
         vc.transitioningDelegate = self
         self.present(vc, animated: true)
+    }
+    private func settingRobotGifPlay() {
+        let imageName = UIImage.gifImageWithName("robot gif")
+        settingRobotGifView.image = imageName
     }
 }
 

@@ -9,11 +9,16 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var letsGoGifView: UIView!
     @IBOutlet weak var askButton: UIButton!
+    @IBOutlet weak var letsGoImageView: UIImageView!
+    @IBOutlet weak var messageGifView: UIImageView!
+    @IBOutlet weak var askView1: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        askButton.layer.cornerRadius = 12
-
+        gifPlayFunction()
     }
     /// Stausbar color change
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -26,5 +31,13 @@ class SecondViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         }
+    }
+    
+    private func gifPlayFunction() {
+        askView1.layer.cornerRadius = 20
+        let imageName = UIImage.gifImageWithName("let's go gif")
+        let imageName2 = UIImage.gifImageWithName("contact us")
+        letsGoImageView.image = imageName
+        messageGifView.image = imageName2
     }
 }

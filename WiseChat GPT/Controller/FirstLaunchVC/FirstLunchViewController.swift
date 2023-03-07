@@ -25,9 +25,8 @@ class FirstLunchViewController: UIViewController {
         }
     }
     
-    /// Stausbar color change
-    override var preferredStatusBarStyle : UIStatusBarStyle {
-        return .lightContent //.default for black style
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
 }

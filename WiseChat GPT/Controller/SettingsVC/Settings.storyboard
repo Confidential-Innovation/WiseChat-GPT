@@ -22,16 +22,16 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pu-Gc-4jx" userLabel="topView">
-                                        <rect key="frame" x="0.0" y="-6" width="393" height="41.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="-2.3333333333333357" width="393" height="38"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKY-F0-Mkf">
-                                                <rect key="frame" x="151" y="-4.3333333333333357" width="91" height="50.333333333333336"/>
+                                                <rect key="frame" x="151" y="-6.3333333333333286" width="91" height="50.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-il-uWC">
-                                                <rect key="frame" x="20.000000000000004" y="4" width="35.333333333333343" height="33.333333333333336"/>
+                                                <rect key="frame" x="20.000000000000004" y="3.6666666666666732" width="35.333333333333343" height="30.666666666666671"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="xmark" catalog="system"/>
@@ -40,7 +40,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNu-o0-pXE">
-                                                <rect key="frame" x="0.0" y="41" width="393" height="0.6666666666666643"/>
+                                                <rect key="frame" x="0.0" y="37.333333333333336" width="393" height="0.6666666666666643"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.5" id="rXq-wf-TkO"/>
@@ -295,11 +295,14 @@
                                             <constraint firstItem="Zfc-Jm-NZZ" firstAttribute="top" secondItem="TEY-xN-Brp" secondAttribute="top" id="tmc-ni-OTu"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wise robot" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-4r-E7n">
-                                        <rect key="frame" x="0.0" y="64" width="393" height="190"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-4r-E7n">
+                                        <rect key="frame" x="58" y="35" width="277" height="191"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powerfull" translatesAutoresizingMaskIntoConstraints="NO" id="NzV-SQ-Yx2">
                                         <rect key="frame" x="39.333333333333343" y="634.66666666666663" width="314.33333333333326" height="35"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WiseChat GPT" translatesAutoresizingMaskIntoConstraints="NO" id="CTJ-Le-ybx">
+                                        <rect key="frame" x="58" y="237" width="277" height="19"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1019607931" green="0.1019607931" blue="0.1019607931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -314,12 +317,12 @@
                                     <constraint firstItem="TEY-xN-Brp" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.0645586" id="CA3-Ne-wOY"/>
                                     <constraint firstItem="NzV-SQ-Yx2" firstAttribute="centerX" secondItem="ZAV-7q-xpK" secondAttribute="centerX" id="CPN-Cx-F1j"/>
                                     <constraint firstItem="5Pu-Gc-4jx" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" id="CQz-37-mOr"/>
-                                    <constraint firstItem="dc1-4r-E7n" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.250329" id="Cc4-gc-IlD"/>
+                                    <constraint firstItem="dc1-4r-E7n" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.2" constant="39.199999999999989" id="Cc4-gc-IlD"/>
                                     <constraint firstItem="5O1-uM-mAM" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" multiplier="0.662426" id="DNq-oA-DWR"/>
-                                    <constraint firstItem="dc1-4r-E7n" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" id="G5x-C5-J2F"/>
+                                    <constraint firstItem="CTJ-Le-ybx" firstAttribute="centerX" secondItem="dc1-4r-E7n" secondAttribute="centerX" id="J5o-FJ-j5C"/>
                                     <constraint firstItem="3Uk-oA-BW0" firstAttribute="leading" secondItem="ZAV-7q-xpK" secondAttribute="leading" constant="30" id="KGV-IS-7r6"/>
                                     <constraint firstItem="TEY-xN-Brp" firstAttribute="leading" secondItem="ZAV-7q-xpK" secondAttribute="leading" constant="30" id="KqY-kw-k9n"/>
-                                    <constraint firstItem="dc1-4r-E7n" firstAttribute="leading" secondItem="ZAV-7q-xpK" secondAttribute="leading" id="Lpm-hc-KMn"/>
+                                    <constraint firstItem="dc1-4r-E7n" firstAttribute="leading" secondItem="ZAV-7q-xpK" secondAttribute="leading" constant="58" id="Lpm-hc-KMn"/>
                                     <constraint firstItem="5O1-uM-mAM" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.0645586" id="OAb-s5-Gdq"/>
                                     <constraint firstAttribute="bottom" secondItem="5O1-uM-mAM" secondAttribute="bottom" multiplier="852:443" id="PCy-mk-uNe"/>
                                     <constraint firstAttribute="bottom" secondItem="NzV-SQ-Yx2" secondAttribute="bottom" multiplier="952:840" id="QcG-rl-JGo"/>
@@ -328,15 +331,18 @@
                                     <constraint firstItem="MAK-Q9-6GT" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" multiplier="0.662426" id="bWa-bj-E2S"/>
                                     <constraint firstAttribute="trailing" secondItem="5Pu-Gc-4jx" secondAttribute="trailing" id="do5-La-aOk"/>
                                     <constraint firstAttribute="bottom" secondItem="3Uk-oA-BW0" secondAttribute="bottom" multiplier="852:585" id="eIQ-8q-LDt"/>
-                                    <constraint firstItem="5Pu-Gc-4jx" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.055" id="h4D-FY-9Bq"/>
+                                    <constraint firstItem="CTJ-Le-ybx" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.025" id="gAR-YX-Eg9"/>
+                                    <constraint firstItem="5Pu-Gc-4jx" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.05" id="h4D-FY-9Bq"/>
                                     <constraint firstItem="8aq-Cv-y8z" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" multiplier="0.6626" id="hy1-AF-0M1"/>
+                                    <constraint firstItem="CTJ-Le-ybx" firstAttribute="bottom" secondItem="dc1-4r-E7n" secondAttribute="bottom" constant="30" id="jPC-cC-IS9"/>
                                     <constraint firstItem="NzV-SQ-Yx2" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" multiplier="0.8" id="nGO-aO-CHW"/>
                                     <constraint firstAttribute="bottom" secondItem="MAK-Q9-6GT" secondAttribute="bottom" multiplier="852:513" id="o4B-uv-Jl3"/>
-                                    <constraint firstAttribute="bottom" secondItem="dc1-4r-E7n" secondAttribute="bottom" multiplier="852:285" id="odh-de-QYW"/>
+                                    <constraint firstAttribute="bottom" secondItem="dc1-4r-E7n" secondAttribute="bottom" multiplier="852:230" constant="-78.182608695652107" id="odh-de-QYW"/>
+                                    <constraint firstItem="CTJ-Le-ybx" firstAttribute="width" secondItem="dc1-4r-E7n" secondAttribute="width" id="szo-F1-3kh"/>
                                     <constraint firstItem="8aq-Cv-y8z" firstAttribute="leading" secondItem="ZAV-7q-xpK" secondAttribute="leading" constant="30" id="uAd-8i-l2D"/>
                                     <constraint firstItem="MAK-Q9-6GT" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.0645586" id="ulj-aG-gMZ"/>
                                     <constraint firstItem="MAK-Q9-6GT" firstAttribute="leading" secondItem="ZAV-7q-xpK" secondAttribute="leading" constant="30" id="wIn-1s-B2D"/>
-                                    <constraint firstAttribute="trailing" secondItem="dc1-4r-E7n" secondAttribute="trailing" id="yss-bP-KeG"/>
+                                    <constraint firstAttribute="trailing" secondItem="dc1-4r-E7n" secondAttribute="trailing" constant="58" id="yss-bP-KeG"/>
                                     <constraint firstItem="8aq-Cv-y8z" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.0645586" id="zpt-Wt-T0A"/>
                                 </constraints>
                             </view>
@@ -350,6 +356,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZAV-7q-xpK" secondAttribute="bottom" id="vTz-b3-Utg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingRobotGifView" destination="dc1-4r-E7n" id="nkz-iL-XXM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,6 +366,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="WiseChat GPT" width="271" height="31"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="emailIcon" width="31.333333969116211" height="31"/>
         <image name="powerfull" width="374" height="35"/>
@@ -364,7 +374,6 @@
         <image name="star" width="28" height="28"/>
         <image name="term" width="30" height="30"/>
         <image name="top send" width="32" height="32"/>
-        <image name="wise robot" width="282" height="438"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
