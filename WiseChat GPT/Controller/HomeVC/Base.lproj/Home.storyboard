@@ -22,16 +22,16 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVM-pl-akU">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="41.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WiseChat GPT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou1-Xa-xbR">
-                                                <rect key="frame" x="130" y="5.3333333333333268" width="133" height="27.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <rect key="frame" x="124.00000000000001" y="5.6666666666666696" width="145.33333333333337" height="30.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INu-cs-LAp">
-                                                <rect key="frame" x="16.000000000000004" y="0.0" width="35.333333333333343" height="38"/>
+                                                <rect key="frame" x="16.000000000000004" y="0.0" width="35.333333333333343" height="41.666666666666664"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -42,7 +42,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-Ib-DQc" userLabel="settingButton">
-                                                <rect key="frame" x="350.66666666666669" y="6.3333333333333268" width="26.333333333333314" height="25.333333333333329"/>
+                                                <rect key="frame" x="350.66666666666669" y="7.0000000000000018" width="26.333333333333314" height="27.666666666666671"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -53,7 +53,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwF-Bz-99U" userLabel="settingButton">
-                                                <rect key="frame" x="302" y="0.0" width="23.666666666666686" height="38"/>
+                                                <rect key="frame" x="302" y="0.0" width="23.666666666666686" height="41.666666666666664"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -84,14 +84,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp5-Ln-HkZ" userLabel="lineView">
-                                        <rect key="frame" x="0.0" y="38" width="393" height="0.6666666666666643"/>
+                                        <rect key="frame" x="0.0" y="41.666666666666671" width="393" height="0.6666666666666643"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.59999999999999998" id="L4H-E5-7rJ"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBC-VT-C2K">
-                                        <rect key="frame" x="0.0" y="43.666666666666686" width="393" height="639"/>
+                                        <rect key="frame" x="0.0" y="48.333333333333314" width="393" height="641.33333333333348"/>
                                         <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="gi2-mo-Ed2" customClass="WiseChatTableViewCell" customModule="WiseChat_GPT" customModuleProvider="target">
@@ -177,16 +177,16 @@
                                     <constraint firstAttribute="trailing" secondItem="qp5-Ln-HkZ" secondAttribute="trailing" id="9S2-jn-gqR"/>
                                     <constraint firstAttribute="bottom" secondItem="MNk-0i-tes" secondAttribute="bottom" id="FGn-SY-PWk"/>
                                     <constraint firstItem="JVM-pl-akU" firstAttribute="top" secondItem="C3L-h8-Kcj" secondAttribute="top" id="Ft7-G0-nWC"/>
-                                    <constraint firstItem="JVM-pl-akU" firstAttribute="height" secondItem="C3L-h8-Kcj" secondAttribute="height" multiplier="0.05" id="J6X-zd-83F"/>
+                                    <constraint firstItem="JVM-pl-akU" firstAttribute="height" secondItem="C3L-h8-Kcj" secondAttribute="height" multiplier="0.055" id="J6X-zd-83F"/>
                                     <constraint firstItem="MNk-0i-tes" firstAttribute="leading" secondItem="C3L-h8-Kcj" secondAttribute="leading" id="Jye-OM-ptj"/>
                                     <constraint firstItem="MNk-0i-tes" firstAttribute="top" secondItem="FbF-Cx-W1m" secondAttribute="bottom" id="LYf-iX-5qr"/>
                                     <constraint firstItem="qp5-Ln-HkZ" firstAttribute="leading" secondItem="C3L-h8-Kcj" secondAttribute="leading" id="NJL-kF-Rod"/>
                                     <constraint firstAttribute="trailing" secondItem="TBC-VT-C2K" secondAttribute="trailing" id="RFi-17-3bE"/>
                                     <constraint firstItem="JVM-pl-akU" firstAttribute="leading" secondItem="C3L-h8-Kcj" secondAttribute="leading" id="Rq3-Z0-QjT"/>
-                                    <constraint firstItem="FbF-Cx-W1m" firstAttribute="top" secondItem="TBC-VT-C2K" secondAttribute="bottom" constant="15" id="Rzx-bF-7Mf"/>
                                     <constraint firstAttribute="trailing" secondItem="FbF-Cx-W1m" secondAttribute="trailing" id="f2R-pL-d7P"/>
-                                    <constraint firstItem="TBC-VT-C2K" firstAttribute="top" secondItem="qp5-Ln-HkZ" secondAttribute="bottom" constant="5" id="fs0-8H-0Bk"/>
+                                    <constraint firstItem="FbF-Cx-W1m" firstAttribute="top" secondItem="TBC-VT-C2K" secondAttribute="bottom" constant="8" id="hEM-Ao-Lwc"/>
                                     <constraint firstAttribute="trailing" secondItem="MNk-0i-tes" secondAttribute="trailing" id="iLV-c3-ODp"/>
+                                    <constraint firstItem="TBC-VT-C2K" firstAttribute="top" secondItem="qp5-Ln-HkZ" secondAttribute="bottom" constant="6" id="pmH-cR-vdw"/>
                                     <constraint firstItem="FbF-Cx-W1m" firstAttribute="leading" secondItem="C3L-h8-Kcj" secondAttribute="leading" id="sFN-KW-7ep"/>
                                     <constraint firstItem="MNk-0i-tes" firstAttribute="height" secondItem="C3L-h8-Kcj" secondAttribute="height" multiplier="0.08" id="w5b-1b-Y8E"/>
                                     <constraint firstItem="qp5-Ln-HkZ" firstAttribute="top" secondItem="JVM-pl-akU" secondAttribute="bottom" id="y5A-Nv-nRy"/>
@@ -210,6 +210,8 @@
                         <outlet property="bgView" destination="C3L-h8-Kcj" id="uKG-8f-CC2"/>
                         <outlet property="bottomNSLayoutView" destination="FGn-SY-PWk" id="9wr-F5-3gi"/>
                         <outlet property="placeHolderTextLabel" destination="qc1-Gw-l4P" id="yey-Q4-V18"/>
+                        <outlet property="sendButtonHide" destination="m2k-n3-ubE" id="76P-hw-zgN"/>
+                        <outlet property="textBGView" destination="MNk-0i-tes" id="3cB-IQ-78A"/>
                         <outlet property="wiseChatTableView" destination="TBC-VT-C2K" id="bb7-6Y-YJ4"/>
                         <outlet property="wiseChatTextView" destination="HNt-gf-j4t" id="gc9-E6-Gh3"/>
                     </connections>

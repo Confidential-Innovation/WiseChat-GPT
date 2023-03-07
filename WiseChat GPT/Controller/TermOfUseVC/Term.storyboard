@@ -175,7 +175,7 @@ CapabilitiesView</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPz-qo-f7z" userLabel="topView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="41.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Terms" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jV3-30-RVv">
                                                 <rect key="frame" x="141.33333333333334" y="4.9999999999999982" width="110.33333333333334" height="26.333333333333329"/>
@@ -184,7 +184,7 @@ CapabilitiesView</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BM-zj-CJ1">
-                                                <rect key="frame" x="20.000000000000004" y="2.9999999999999982" width="35.333333333333343" height="30.333333333333329"/>
+                                                <rect key="frame" x="20.000000000000004" y="3.6666666666666643" width="35.333333333333343" height="29"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -206,7 +206,7 @@ CapabilitiesView</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tL9-jj-Xm9">
-                                        <rect key="frame" x="0.0" y="44" width="393" height="0.6666666666666643"/>
+                                        <rect key="frame" x="0.0" y="41.666666666666671" width="393" height="0.6666666666666643"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.59999999999999998" id="2On-bP-dPS"/>
@@ -232,7 +232,7 @@ CapabilitiesView</string>
                                     <constraint firstItem="qPs-eZ-VbS" firstAttribute="centerX" secondItem="9gy-o3-HJ8" secondAttribute="centerX" id="iHi-ri-Oqz"/>
                                     <constraint firstItem="NLW-kH-uwD" firstAttribute="width" secondItem="9gy-o3-HJ8" secondAttribute="width" multiplier="0.559796" id="lAk-XN-7Ue"/>
                                     <constraint firstAttribute="bottom" secondItem="qPs-eZ-VbS" secondAttribute="bottom" multiplier="852:170" id="uLX-TV-0C3"/>
-                                    <constraint firstItem="rPz-qo-f7z" firstAttribute="height" secondItem="9gy-o3-HJ8" secondAttribute="height" multiplier="0.058" id="uid-JH-3th"/>
+                                    <constraint firstItem="rPz-qo-f7z" firstAttribute="height" secondItem="9gy-o3-HJ8" secondAttribute="height" multiplier="0.055" id="uid-JH-3th"/>
                                     <constraint firstItem="NLW-kH-uwD" firstAttribute="centerX" secondItem="9gy-o3-HJ8" secondAttribute="centerX" id="zF3-YX-6IU"/>
                                 </constraints>
                             </view>

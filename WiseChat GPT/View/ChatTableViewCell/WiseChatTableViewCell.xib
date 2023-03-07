@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-0z-lN0">
-                                <rect key="frame" x="54" y="5" width="242" height="34"/>
+                                <rect key="frame" x="54" y="5" width="235" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Lyn-6t-ANA"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                         <constraints>
                             <constraint firstItem="k50-c4-Fwy" firstAttribute="top" secondItem="yfY-0z-lN0" secondAttribute="top" id="0pY-LE-Jnk"/>
                             <constraint firstItem="yfY-0z-lN0" firstAttribute="top" secondItem="9LR-MC-WZK" secondAttribute="top" constant="5" id="VQu-05-xHe"/>
-                            <constraint firstAttribute="trailing" secondItem="yfY-0z-lN0" secondAttribute="trailing" constant="8" id="kJ4-Gf-5OD"/>
+                            <constraint firstAttribute="trailing" secondItem="yfY-0z-lN0" secondAttribute="trailing" constant="15" id="kJ4-Gf-5OD"/>
                             <constraint firstItem="yfY-0z-lN0" firstAttribute="leading" secondItem="k50-c4-Fwy" secondAttribute="trailing" constant="15" id="syd-Yb-ldw"/>
                             <constraint firstItem="k50-c4-Fwy" firstAttribute="leading" secondItem="9LR-MC-WZK" secondAttribute="leading" constant="5" id="tIp-zY-ham"/>
                             <constraint firstAttribute="bottom" secondItem="yfY-0z-lN0" secondAttribute="bottom" constant="5" id="tYC-bm-mPl"/>

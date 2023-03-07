@@ -193,12 +193,12 @@
 		2182488029A9F020001EC910 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				21950D6029B4918D00447356 /* HistoryVC */,
-				21950D5129B4597D00447356 /* TermOfUseVC */,
 				2189F24729B39EFD00C48215 /* FirstLaunchVC */,
 				21FBD96229B3BE6C003FCE8C /* SecondLaunchVC */,
-				21B97D8A29AD2C1E004FB3F1 /* SettingsVC */,
 				2182488429A9F081001EC910 /* HomeVC */,
+				21B97D8A29AD2C1E004FB3F1 /* SettingsVC */,
+				21950D6029B4918D00447356 /* HistoryVC */,
+				21950D5129B4597D00447356 /* TermOfUseVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

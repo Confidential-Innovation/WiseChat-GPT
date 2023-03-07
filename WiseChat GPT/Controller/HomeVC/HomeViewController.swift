@@ -17,17 +17,34 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var placeHolderTextLabel: UILabel!
     @IBOutlet weak var bottomNSLayoutView: NSLayoutConstraint!
     @IBOutlet weak var bgView: UIView!
-
+    @IBOutlet weak var textBGView: UIView!
+    @IBOutlet weak var sendButtonHide: UIButton!
+    
     var activityView: UIActivityIndicatorView?
     let scanLoderView: UIView = UIView()
     let typingLoaderView: UIView = UIView()
     var chat = [String]()
     var request = VNRecognizeTextRequest(completionHandler: nil)
     var textShare = ""
-    var speakerText = ""
-
+    var selectIndexNumber = 0
+    var answerNumberCount = 0
     var keyboradHeight = 0
     let animation = DotsAnimation()
+    var currentUtterance = AVSpeechSynthesizer()
+
+    lazy var copyTextLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Copeid!"
+        label.textColor = .black
+        label.textAlignment = .center
+        label.numberOfLines = .zero
+        label.backgroundColor = .white
+        label.layer.cornerRadius = 10
+        label.font = UIFont.systemFont(ofSize: 25)
+        return label
+    }()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +53,10 @@ class HomeViewController: UIViewController {
         setupUI()
         showActivityIndicatory()
         keyBoardHeightGet()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         TypingLoaderAnimation()
     }
     
@@ -67,7 +88,7 @@ class HomeViewController: UIViewController {
     }
     
     /// Typing Loader Animation
-    public func TypingLoaderAnimation() {
+    private func TypingLoaderAnimation() {
 
         typingLoaderView.frame = CGRect(x: 0, y: 0, width: 60, height: 40)
         typingLoaderView.backgroundColor = .systemPink
@@ -81,7 +102,7 @@ class HomeViewController: UIViewController {
     }
     
 /// Scanner Activity Indicator
-    public func showActivityIndicatory() {
+    private func showActivityIndicatory() {
         scanLoderView.frame = CGRect(x: 0, y: 0, width: 80, height: 75)
         scanLoderView.backgroundColor = .white
         activityView = UIActivityIndicatorView(style: .large)
@@ -112,7 +133,6 @@ class HomeViewController: UIViewController {
                     print("No candidate")
                     continue
                 }
-
                 textString += "\(topCandidate.string)"
 
                 DispatchQueue.main.async { [self] in
@@ -128,7 +148,7 @@ class HomeViewController: UIViewController {
 
         /// add some properties
         request.recognitionLevel = .accurate
-        request.recognitionLanguages = ["en-US","fr-FR", "zh-Hans"]
+        request.recognitionLanguages = ["en-US"]
         request.minimumTextHeight = 0.05
         request.usesLanguageCorrection = true
 
@@ -141,31 +161,50 @@ class HomeViewController: UIViewController {
             try? handle.perform(requests)
         }
     }
+
     
     func tableViewCellClickAlertMenuOption() {
-        
+
         let optionMenu = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
-        let titleAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 22)!, NSAttributedString.Key.foregroundColor: UIColor.black]
-        let titleString = NSAttributedString(string: "Details", attributes: titleAttributes)
+        let titleAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.black]
+        let messageAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.black]
+        let titleString = NSAttributedString(string: "- Details -", attributes: titleAttributes)
+        let messageString = NSAttributedString(string: "Answer Number: \(answerNumberCount)", attributes: messageAttributes)
         optionMenu.setValue(titleString, forKey: "attributedTitle")
+        optionMenu.setValue(messageString, forKey: "attributedMessage")
         
         let speakerAction = UIAlertAction(title: "Speaker", style: .default, handler: { [self]
             (alert: UIAlertAction!) -> Void in
-            let utterance = AVSpeechUtterance(string: speakerText)
-            utterance.voice = AVSpeechSynthesisVoice(language: "en-AI")
-            let synth = AVSpeechSynthesizer()
-            synth.speak(utterance)
-
-   
+            if !currentUtterance.isSpeaking {
+                let speakText = AVSpeechUtterance(string: chat[selectIndexNumber])
+                speakText.voice = AVSpeechSynthesisVoice(language: "en-AI")
+                speakText.rate = 0.5
+                let synth = AVSpeechSynthesizer()
+    //            synth.replacementObject(for: chat[selectIndexNumber])
+                synth.speak(speakText)
+            } else {
+                currentUtterance.stopSpeaking(at: AVSpeechBoundary.immediate)
+            }
+            
         })
-        let speakerImage = UIImage(systemName: "speaker.2")
-        if let speakerImage = speakerImage?.imageWithSize(scaledToSize: CGSize(width: 32, height: 26)) {
+        let speakerImage = UIImage(systemName: "speaker.3")
+        if let speakerImage = speakerImage?.imageWithSize(scaledToSize: CGSize(width: 36, height: 28)) {
             speakerAction.setValue(speakerImage, forKey: "image")
         }
           
-        let copyAction = UIAlertAction(title: "Copy", style: .default, handler: {
+        let copyAction = UIAlertAction(title: "Copy", style: .default, handler: { [self]
             (alert: UIAlertAction!) -> Void in
-            
+            wiseChatTableView.addSubview(copyTextLabel)
+            UIPasteboard.general.string = chat[selectIndexNumber]
+            copyTextLabel.layer.cornerRadius = 20
+            copyTextLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+            copyTextLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
+            copyTextLabel.centerXAnchor.constraint(equalTo: wiseChatTableView.centerXAnchor).isActive = true
+            copyTextLabel.centerYAnchor.constraint(equalTo: wiseChatTableView.centerYAnchor).isActive = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.copyTextLabel.isHidden = true
+            }
+
         })
         
         let copyImage = UIImage(systemName: "doc.on.doc")
@@ -183,8 +222,12 @@ class HomeViewController: UIViewController {
             saveAction.setValue(saveImage, forKey: "image")
         }
         
-        let shareAction = UIAlertAction(title: "Share", style: .default, handler: {
+        let shareAction = UIAlertAction(title: "Share", style: .default, handler: { [self]
             (alert: UIAlertAction!) -> Void in
+            let shareAll = [chat[selectIndexNumber]]
+            let activityViewController = UIActivityViewController(activityItems: shareAll as [Any], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
             
         })
         let shareImage = UIImage(systemName: "arrow.up.square")
@@ -194,8 +237,8 @@ class HomeViewController: UIViewController {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
             (alert: UIAlertAction!) -> Void in
-            
         })
+        cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
         
         optionMenu.addAction(speakerAction)
         optionMenu.addAction(copyAction)
@@ -203,6 +246,7 @@ class HomeViewController: UIViewController {
         optionMenu.addAction(shareAction)
         optionMenu.addAction(cancelAction)
         optionMenu.view.tintColor = .black
+        optionMenu.setBackgroundColor(color: .white)
         self.present(optionMenu, animated: true, completion: nil)
 
     }
@@ -219,6 +263,8 @@ class HomeViewController: UIViewController {
         wiseChatTextView.textColor = UIColor.black
         bgView.backgroundColor = #colorLiteral(red: 0.1824988425, green: 0.192479372, blue: 0.1879994869, alpha: 1)
         keyboardTapToHide()
+        bgView.isUserInteractionEnabled = true
+
     }
     
     /// TableView cell setup
@@ -253,17 +299,18 @@ class HomeViewController: UIViewController {
                     chat.append(prompt)
                     historyArray.append(prompt)
                     chat.append(gptText.replacingOccurrences(of: "\n\n", with: ""))
-                    speakerText.append(gptText)
                     typingLoaderView.isHidden = true
                     wiseChatTableView.alpha = 1.0
                     wiseChatTableView.reloadData()
+                    sendButtonHide.alpha = 1
+                    bgView.isUserInteractionEnabled = true
                     scrollToButton()
                 }
             } catch {
-                print("Error! Your api key is already used.\nPlease Change your API Key?")
+                print("Error! 'Please change your API key' or 'Your internet not access! Please your internet connect.'")
                 typingLoaderView.isHidden = true
                 wiseChatTableView.alpha = 1.0
-                let alert = UIAlertController(title: "API Key Alert!", message: "Error! Your api key is already used.\nPlease Change your API Key?", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "Attention!", message: "Error! 'Please change your API key' or 'Your internet not access! Please your internet connect.'", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                 alert.view.tintColor = .systemPink
                 self.present(alert, animated: true, completion: nil)
@@ -284,18 +331,26 @@ class HomeViewController: UIViewController {
     /// Send Action Button
     @IBAction func wiseChatSendButtonAction(_ sender: UIButton) {
         wiseChatTextView.resignFirstResponder()
-        let promptText = wiseChatTextView.text
-        
-        self.fetchChatGPTForResponse(prompt: promptText!)
-        UIView.animate(withDuration: 0.3){ [self] in
-            bottomNSLayoutView.constant  = 0
-            bgView.backgroundColor = #colorLiteral(red: 0.1824988425, green: 0.192479372, blue: 0.1879994869, alpha: 1)
-            view.layoutIfNeeded()
-            typingLoaderView.isHidden = false
-            wiseChatTableView.alpha = 0.5
+        if wiseChatTextView.text.count > 0 {
+            let promptText = wiseChatTextView.text
+            self.fetchChatGPTForResponse(prompt: promptText!)
+            UIView.animate(withDuration: 0.3){ [self] in
+                bottomNSLayoutView.constant  = 0
+                bgView.backgroundColor = #colorLiteral(red: 0.1824988425, green: 0.192479372, blue: 0.1879994869, alpha: 1)
+                view.layoutIfNeeded()
+                typingLoaderView.isHidden = false
+                wiseChatTableView.alpha = 0.5
+                sendButtonHide.alpha = 0.5
+            }
+            bgView.isUserInteractionEnabled = false
+            placeHolderTextLabel.isHidden = false
+            wiseChatTextView.text = ""
+        } else {
+            let alert = UIAlertController(title: "No question!", message: "You didn't ask any questions. Please enter your question in the Text-Field.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            alert.view.tintColor = .red
+            self.present(alert, animated: true, completion: nil)
         }
-        placeHolderTextLabel.isHidden = false
-        wiseChatTextView.text = ""
     }
     
     /// Settings Action Button
@@ -343,10 +398,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.bgcellView.layer.shadowRadius = 1.5
             cell.bgcellView.layer.borderColor = .init(red: 137, green: 207, blue: 240, alpha: 0.1)
             cell.bgcellView.layer.borderWidth = 3
-            //            cell.threeDotsButton.isHidden = true
-            //            cell.threeDotsImageView.isHidden = true
-            
-            
             cell.wiseChatImageView.image = UIImage(named: "man")
             return cell
             
@@ -370,8 +421,38 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row % 2 == 1 {
+            selectIndexNumber = indexPath.row
+            answerNumberCount = ((indexPath.row)+1)/2
             tableViewCellClickAlertMenuOption()
+
+        } else {
         }
+    }
+    
+    // MARK: Cell Animation
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row % 2 == 0 {
+            let anim = CATransform3DTranslate(CATransform3DIdentity, 500, 100, 0)
+            cell.layer.transform = anim
+            cell.alpha = 0.3
+            
+            UIView.animate(withDuration: 0.4){
+                cell.layer.transform = CATransform3DIdentity
+                cell.alpha = 1
+            }
+        } else {
+            let anim = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
+            cell.layer.transform = anim
+            cell.alpha = 0.3
+            
+            UIView.animate(withDuration: 0.5){
+                cell.layer.transform = CATransform3DIdentity
+                cell.alpha = 1
+            }
+        }
+        
     }
     
     
@@ -482,6 +563,8 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     }
 }
 
+// MARK: Action Sheet Button Image
+
 extension UIImage {
     func imageWithSize(scaledToSize newSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
@@ -492,3 +575,51 @@ extension UIImage {
     }
 }
 
+// MARK: UIAlert Controller Custom Action Sheet
+
+extension UIAlertController {
+    
+    //Set background color of UIAlertController
+    func setBackgroundColor(color: UIColor) {
+        if let bgView = self.view.subviews.first, let groupView = bgView.subviews.first, let contentView = groupView.subviews.first {
+            contentView.backgroundColor = color
+        }
+    }
+    
+    //Set title font and title color
+    func setTitlet(font: UIFont?, color: UIColor?) {
+        guard let title = self.title else { return }
+        let attributeString = NSMutableAttributedString(string: title)//1
+        if let titleFont = font {
+            attributeString.addAttributes([NSAttributedString.Key.font : titleFont],//2
+                                          range: NSMakeRange(0, title.utf8.count))
+        }
+        
+        if let titleColor = color {
+            attributeString.addAttributes([NSAttributedString.Key.foregroundColor : titleColor],//3
+                                          range: NSMakeRange(0, title.utf8.count))
+        }
+        self.setValue(attributeString, forKey: "attributedTitle")//4
+    }
+    
+    //Set message font and message color
+    func setMessage(font: UIFont?, color: UIColor?) {
+        guard let message = self.message else { return }
+        let attributeString = NSMutableAttributedString(string: message)
+        if let messageFont = font {
+            attributeString.addAttributes([NSAttributedString.Key.font : messageFont],
+                                          range: NSMakeRange(0, message.utf8.count))
+        }
+        
+        if let messageColorColor = color {
+            attributeString.addAttributes([NSAttributedString.Key.foregroundColor : messageColorColor],
+                                          range: NSMakeRange(0, message.utf8.count))
+        }
+        self.setValue(attributeString, forKey: "attributedMessage")
+    }
+    
+    //Set tint color of UIAlertController
+    func setTint(color: UIColor) {
+        self.view.tintColor = color
+    }
+}

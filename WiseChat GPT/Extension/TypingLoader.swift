@@ -40,9 +40,10 @@ class DotsAnimation {
         var frame = CGRect(origin: CGPoint(x: (superView.frame.width - dotTotalWidth)/2, y: (superView.frame.height-dotDiameter)/2),
                            size: CGSize(width: dotDiameter, height: dotDiameter))
         let cornerRadiusLocal = dotDiameter / 2
+
         for _ in 0...Int(numberDots-1) {
             let dot: UIView = UIView(frame: frame)
-            dot.layer.cornerRadius = cornerRadiusLocal
+            dot.layer.cornerRadius = cornerRadiusLocal;
             dot.backgroundColor = dotsColor
             dots.addSubview(dot)
             frame.origin.x += (2.0 * dotDiameter)
@@ -58,10 +59,9 @@ class DotsAnimation {
             animations: {
                 UIView.addKeyframe(
                     withRelativeStartTime: 0.0,
-                    relativeDuration: .infinity,
+                    relativeDuration: 0.33333333333,
                     animations: {
                         dotToAnimate.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-                        dotToAnimate.layer.repeatCount = .infinity
                     }
                 )
                 UIView.addKeyframe(
@@ -69,7 +69,6 @@ class DotsAnimation {
                     relativeDuration: 0.66666666667,
                     animations: {
                         dotToAnimate.transform = CGAffineTransform.identity
-                        dotToAnimate.layer.repeatCount = .infinity
                     }
                 )
             }

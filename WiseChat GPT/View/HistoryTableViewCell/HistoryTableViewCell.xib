@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,22 +20,62 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsg-3e-PIr" userLabel="bgView">
-                        <rect key="frame" x="8" y="8" width="286" height="50"/>
+                        <rect key="frame" x="8" y="6" width="286" height="54"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7y-oT-gwb">
-                                <rect key="frame" x="8" y="7" width="270" height="36"/>
+                                <rect key="frame" x="39" y="5" width="207" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcI-x5-Ail">
+                                <rect key="frame" x="5" y="9" width="26" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="8PB-KW-HUf"/>
+                                    <constraint firstAttribute="height" constant="24" id="LYd-uO-y05"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="clock.arrow.circlepath" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-2Z-oQ3">
+                                <rect key="frame" x="254" y="9" width="27" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="hfX-ox-MrZ"/>
+                                    <constraint firstAttribute="height" constant="26" id="piQ-EN-l7j"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="chevron.right.square" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 March 2023, Tue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83m-F0-QoC">
+                                <rect key="frame" x="39" y="37" width="208" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="Day-zA-gGA"/>
+                                    <constraint firstAttribute="width" constant="208" id="Tqu-v9-imA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" red="1" green="0.19766298534913296" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="B7y-oT-gwb" secondAttribute="bottom" constant="7" id="Ms5-b7-HPI"/>
-                            <constraint firstItem="B7y-oT-gwb" firstAttribute="height" relation="greaterThanOrEqual" secondItem="Hsg-3e-PIr" secondAttribute="height" multiplier="0.72" id="V9M-Gz-9Zl"/>
-                            <constraint firstItem="B7y-oT-gwb" firstAttribute="top" secondItem="Hsg-3e-PIr" secondAttribute="top" constant="7" id="WEr-kX-MdA"/>
-                            <constraint firstAttribute="trailing" secondItem="B7y-oT-gwb" secondAttribute="trailing" constant="8" id="rDj-jl-hDd"/>
-                            <constraint firstItem="B7y-oT-gwb" firstAttribute="leading" secondItem="Hsg-3e-PIr" secondAttribute="leading" constant="8" id="wJs-LA-JnW"/>
+                            <constraint firstAttribute="bottom" secondItem="83m-F0-QoC" secondAttribute="bottom" constant="5" id="5X1-vr-IbB"/>
+                            <constraint firstItem="B7y-oT-gwb" firstAttribute="leading" secondItem="vcI-x5-Ail" secondAttribute="trailing" constant="8" id="A5N-nF-IwG"/>
+                            <constraint firstItem="vcI-x5-Ail" firstAttribute="leading" secondItem="Hsg-3e-PIr" secondAttribute="leading" constant="5" id="HEL-Zl-fsB"/>
+                            <constraint firstItem="8ym-2Z-oQ3" firstAttribute="leading" secondItem="B7y-oT-gwb" secondAttribute="trailing" constant="8" id="Pbm-I6-wSf"/>
+                            <constraint firstAttribute="trailing" secondItem="8ym-2Z-oQ3" secondAttribute="trailing" constant="5" id="TV2-Lm-qCQ"/>
+                            <constraint firstItem="B7y-oT-gwb" firstAttribute="top" secondItem="Hsg-3e-PIr" secondAttribute="top" constant="5" id="WEr-kX-MdA"/>
+                            <constraint firstItem="83m-F0-QoC" firstAttribute="top" secondItem="B7y-oT-gwb" secondAttribute="bottom" constant="3" id="ZUG-JO-wmO"/>
+                            <constraint firstItem="8ym-2Z-oQ3" firstAttribute="top" secondItem="B7y-oT-gwb" secondAttribute="top" constant="4" id="cq2-MD-pd3"/>
+                            <constraint firstItem="B7y-oT-gwb" firstAttribute="height" relation="greaterThanOrEqual" secondItem="Hsg-3e-PIr" secondAttribute="height" multiplier="0.5" id="hcD-hz-cAT"/>
+                            <constraint firstItem="vcI-x5-Ail" firstAttribute="top" secondItem="B7y-oT-gwb" secondAttribute="top" constant="4" id="kla-4q-5PK"/>
+                            <constraint firstItem="83m-F0-QoC" firstAttribute="leading" secondItem="B7y-oT-gwb" secondAttribute="leading" id="tRP-s5-civ"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -42,19 +83,22 @@
                 <constraints>
                     <constraint firstItem="Hsg-3e-PIr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="AFZ-9D-zDe"/>
                     <constraint firstAttribute="trailing" secondItem="Hsg-3e-PIr" secondAttribute="trailing" constant="8" id="KOZ-eF-xAP"/>
-                    <constraint firstAttribute="bottom" secondItem="Hsg-3e-PIr" secondAttribute="bottom" constant="8" id="Rss-ps-FTg"/>
-                    <constraint firstItem="Hsg-3e-PIr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="XmW-2h-vxT"/>
+                    <constraint firstAttribute="bottom" secondItem="Hsg-3e-PIr" secondAttribute="bottom" constant="6" id="Rss-ps-FTg"/>
+                    <constraint firstItem="Hsg-3e-PIr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="XmW-2h-vxT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="historyLabel" destination="B7y-oT-gwb" id="D8a-6q-8eO"/>
                 <outlet property="historylabelBGView" destination="Hsg-3e-PIr" id="YVO-FN-yBA"/>
+                <outlet property="timeLabelAdd" destination="83m-F0-QoC" id="CGR-Tm-ZzU"/>
             </connections>
             <point key="canvasLocation" x="29.007633587786259" y="27.464788732394368"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="chevron.right.square" catalog="system" width="128" height="114"/>
+        <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

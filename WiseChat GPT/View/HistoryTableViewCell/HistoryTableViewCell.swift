@@ -11,6 +11,7 @@ class HistoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var historylabelBGView: UIView!
     @IBOutlet weak var historyLabel: UILabel!
+    @IBOutlet weak var timeLabelAdd: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
