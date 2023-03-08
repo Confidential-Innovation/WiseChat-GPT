@@ -32,6 +32,8 @@ class HomeViewController: UIViewController {
     let animation = DotsAnimation()
     var currentUtterance = AVSpeechSynthesizer()
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext // core data shared item
+
     lazy var copyTextLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -53,6 +55,7 @@ class HomeViewController: UIViewController {
         setupUI()
         showActivityIndicatory()
         keyBoardHeightGet()
+        getAllItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +65,7 @@ class HomeViewController: UIViewController {
     
     
     // MARK: - Private method
+    
     
     /// KeyboardNotification and get height
     private func keyBoardHeightGet(){
@@ -297,8 +301,8 @@ class HomeViewController: UIViewController {
                 let gptText = try await APIService().sendPromtToGPT(promt: prompt)
                 await MainActor.run {
                     chat.append(prompt)
-                    historyArray.append(prompt)
                     chat.append(gptText.replacingOccurrences(of: "\n\n", with: ""))
+                    createItem(question: prompt, answer: gptText.replacingOccurrences(of: "\n\n", with: ""))
                     typingLoaderView.isHidden = true
                     wiseChatTableView.alpha = 1.0
                     wiseChatTableView.reloadData()
@@ -621,5 +625,45 @@ extension UIAlertController {
     //Set tint color of UIAlertController
     func setTint(color: UIColor) {
         self.view.tintColor = color
+    }
+}
+
+
+extension HomeViewController {
+    //    MARK: CoreData Function
+
+       internal func getAllItem() {
+            do {
+                historyArray = try context.fetch(MessageItemList.fetchRequest())
+            }
+            catch {
+                print("Error")
+            }
+        }
+        
+       public func createItem(question: String, answer: String) {
+            let newItem = MessageItemList(context: context)
+            newItem.question = question
+            newItem.answer = answer
+            newItem.createdAt = Date()
+
+            do {
+                try context.save()
+                getAllItem()
+            }
+            catch {
+                // Error
+            }
+        }
+        
+    fileprivate func deleteItem(item: MessageItemList) {
+        context.delete(item)
+        
+        do {
+            try context.save()
+        }
+        catch {
+            // Error
+        }
     }
 }

@@ -43,6 +43,10 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-Ib-DQc" userLabel="settingButton">
                                                 <rect key="frame" x="350.66666666666669" y="6.3333333333333268" width="26.333333333333314" height="25.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26.329999999999998" id="6oB-TK-Oh8"/>
+                                                    <constraint firstAttribute="height" constant="25.329999999999998" id="nLy-AC-iR7"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -67,7 +71,6 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="ou1-Xa-xbR" firstAttribute="height" secondItem="JVM-pl-akU" secondAttribute="height" multiplier="0.724138" id="0Lp-eA-8oL"/>
-                                            <constraint firstItem="ciK-Ib-DQc" firstAttribute="width" secondItem="JVM-pl-akU" secondAttribute="width" multiplier="0.067" id="0qL-oG-eD2"/>
                                             <constraint firstItem="ou1-Xa-xbR" firstAttribute="centerY" secondItem="JVM-pl-akU" secondAttribute="centerY" id="100-Ce-Unv"/>
                                             <constraint firstItem="ou1-Xa-xbR" firstAttribute="centerX" secondItem="JVM-pl-akU" secondAttribute="centerX" id="8me-gZ-yhj"/>
                                             <constraint firstItem="CwF-Bz-99U" firstAttribute="centerY" secondItem="ou1-Xa-xbR" secondAttribute="centerY" id="98c-NG-iRm"/>
@@ -78,7 +81,6 @@
                                             <constraint firstItem="INu-cs-LAp" firstAttribute="centerY" secondItem="JVM-pl-akU" secondAttribute="centerY" id="aYT-Pb-Ztz"/>
                                             <constraint firstItem="ciK-Ib-DQc" firstAttribute="centerY" secondItem="JVM-pl-akU" secondAttribute="centerY" id="iDS-Xf-Wv9"/>
                                             <constraint firstItem="INu-cs-LAp" firstAttribute="width" secondItem="JVM-pl-akU" secondAttribute="width" multiplier="0.09" id="imz-ZH-whe"/>
-                                            <constraint firstItem="ciK-Ib-DQc" firstAttribute="height" secondItem="JVM-pl-akU" secondAttribute="height" multiplier="0.66" id="p4B-Vo-Wij"/>
                                             <constraint firstItem="INu-cs-LAp" firstAttribute="leading" secondItem="JVM-pl-akU" secondAttribute="leading" constant="16" id="vGn-wC-xfw"/>
                                             <constraint firstItem="ciK-Ib-DQc" firstAttribute="leading" secondItem="CwF-Bz-99U" secondAttribute="trailing" constant="25" id="vJx-Oy-Ssm"/>
                                         </constraints>
@@ -117,7 +119,7 @@
                                         <rect key="frame" x="0.0" y="698.33333333333337" width="393" height="60.666666666666629"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HNt-gf-j4t">
-                                                <rect key="frame" x="63" y="5" width="267" height="50.666666666666664"/>
+                                                <rect key="frame" x="63" y="5" width="267" height="50.666666666666671"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="15"/>

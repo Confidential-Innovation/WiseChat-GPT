@@ -19,10 +19,16 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gifPlayFunction()
+        
     }
     /// Stausbar color change
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent //.default for black style
+    }
+    
+    override func viewWillLayoutSubviews() {
+        askView1.pulsate()
+
     }
 
     

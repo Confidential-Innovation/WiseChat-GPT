@@ -22,6 +22,8 @@
 		210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F429A94F660085FCC8 /* APIServiceModel.swift */; };
 		210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F529A94F660085FCC8 /* ChatGPTResponse.swift */; };
 		210883F929A94F660085FCC8 /* WiseChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210883F629A94F660085FCC8 /* WiseChatResponse.swift */; };
+		2135AEAF29B8F31400C9EDE1 /* ButtonAnimationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2135AEAE29B8F31400C9EDE1 /* ButtonAnimationEx.swift */; };
+		2135AEB129B913BB00C9EDE1 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2135AEB029B913BB00C9EDE1 /* DatabaseHelper.swift */; };
 		2189F24629B38B7300C48215 /* TypingLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F24529B38B7300C48215 /* TypingLoader.swift */; };
 		2189F24D29B3A29000C48215 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F24C29B3A29000C48215 /* Define.swift */; };
 		2189F25129B3A46B00C48215 /* FirstLunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F25029B3A46B00C48215 /* FirstLunchViewController.swift */; };
@@ -45,6 +47,8 @@
 		21EB4D4529B7966800D9380E /* contact us.gif in Resources */ = {isa = PBXBuildFile; fileRef = 21EB4D4229B7966800D9380E /* contact us.gif */; };
 		21EB4D4629B7966800D9380E /* robot gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 21EB4D4329B7966800D9380E /* robot gif.gif */; };
 		21EB4D4729B7966800D9380E /* chatbot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 21EB4D4429B7966800D9380E /* chatbot.gif */; };
+		21EB4D4A29B7DBFB00D9380E /* MessageItemList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB4D4829B7DBFB00D9380E /* MessageItemList+CoreDataClass.swift */; };
+		21EB4D4B29B7DBFB00D9380E /* MessageItemList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB4D4929B7DBFB00D9380E /* MessageItemList+CoreDataProperties.swift */; };
 		21FBD96429B3BE9A003FCE8C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */; };
 		21FBD96629B3BEB0003FCE8C /* SecondLunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FBD96529B3BEB0003FCE8C /* SecondLunch.storyboard */; };
 /* End PBXBuildFile section */
@@ -86,6 +90,8 @@
 		210883F429A94F660085FCC8 /* APIServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceModel.swift; sourceTree = "<group>"; };
 		210883F529A94F660085FCC8 /* ChatGPTResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatGPTResponse.swift; sourceTree = "<group>"; };
 		210883F629A94F660085FCC8 /* WiseChatResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiseChatResponse.swift; sourceTree = "<group>"; };
+		2135AEAE29B8F31400C9EDE1 /* ButtonAnimationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimationEx.swift; sourceTree = "<group>"; };
+		2135AEB029B913BB00C9EDE1 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		2189F24529B38B7300C48215 /* TypingLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingLoader.swift; sourceTree = "<group>"; };
 		2189F24C29B3A29000C48215 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		2189F25029B3A46B00C48215 /* FirstLunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLunchViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +115,8 @@
 		21EB4D4229B7966800D9380E /* contact us.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "contact us.gif"; sourceTree = "<group>"; };
 		21EB4D4329B7966800D9380E /* robot gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "robot gif.gif"; sourceTree = "<group>"; };
 		21EB4D4429B7966800D9380E /* chatbot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = chatbot.gif; sourceTree = "<group>"; };
+		21EB4D4829B7DBFB00D9380E /* MessageItemList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageItemList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		21EB4D4929B7DBFB00D9380E /* MessageItemList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageItemList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		21FBD96329B3BE9A003FCE8C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		21FBD96529B3BEB0003FCE8C /* SecondLunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondLunch.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +202,7 @@
 		210883F329A94EAE0085FCC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				21EB4D4D29B7DC2100D9380E /* Q&A_Save_CoreData */,
 				2182488529A9F099001EC910 /* ChatGPTAPI */,
 				21FBD96729B3E444003FCE8C /* LaunchDefine */,
 			);
@@ -267,6 +276,7 @@
 				21950D5E29B4778500447356 /* DismissTransition.swift */,
 				21950D6A29B4C46800447356 /* MyLabel.swift */,
 				2196A86B29B776A1003818C2 /* GifPlayEx.swift */,
+				2135AEAE29B8F31400C9EDE1 /* ButtonAnimationEx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -319,6 +329,16 @@
 				21EB4D4329B7966800D9380E /* robot gif.gif */,
 			);
 			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		21EB4D4D29B7DC2100D9380E /* Q&A_Save_CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				21EB4D4829B7DBFB00D9380E /* MessageItemList+CoreDataClass.swift */,
+				21EB4D4929B7DBFB00D9380E /* MessageItemList+CoreDataProperties.swift */,
+				2135AEB029B913BB00C9EDE1 /* DatabaseHelper.swift */,
+			);
+			path = "Q&A_Save_CoreData";
 			sourceTree = "<group>";
 		};
 		21FBD96229B3BE6C003FCE8C /* SecondLaunchVC */ = {
@@ -483,8 +503,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				21950D5D29B4776D00447356 /* PresentTransition.swift in Sources */,
+				2135AEB129B913BB00C9EDE1 /* DatabaseHelper.swift in Sources */,
 				210883C129A94A830085FCC8 /* HomeViewController.swift in Sources */,
 				21950D5729B466EC00447356 /* ExamplesViewController.swift in Sources */,
+				21EB4D4B29B7DBFB00D9380E /* MessageItemList+CoreDataProperties.swift in Sources */,
 				21950D6229B491CF00447356 /* HistoryViewController.swift in Sources */,
 				210883BD29A94A830085FCC8 /* AppDelegate.swift in Sources */,
 				2189F25129B3A46B00C48215 /* FirstLunchViewController.swift in Sources */,
@@ -496,10 +518,12 @@
 				2189F24629B38B7300C48215 /* TypingLoader.swift in Sources */,
 				210883F729A94F660085FCC8 /* APIServiceModel.swift in Sources */,
 				21FBD96429B3BE9A003FCE8C /* SecondViewController.swift in Sources */,
+				2135AEAF29B8F31400C9EDE1 /* ButtonAnimationEx.swift in Sources */,
 				21950D5929B4677B00447356 /* CapabilitiesViewController.swift in Sources */,
 				210883BF29A94A830085FCC8 /* SceneDelegate.swift in Sources */,
 				210883C729A94A830085FCC8 /* WiseChat_GPT.xcdatamodeld in Sources */,
 				210883F129A94CCC0085FCC8 /* WiseChatTableViewCell.swift in Sources */,
+				21EB4D4A29B7DBFB00D9380E /* MessageItemList+CoreDataClass.swift in Sources */,
 				210883F829A94F660085FCC8 /* ChatGPTResponse.swift in Sources */,
 				2189F24D29B3A29000C48215 /* Define.swift in Sources */,
 				21950D5329B4599E00447356 /* TermViewController.swift in Sources */,
@@ -612,7 +636,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -668,7 +692,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

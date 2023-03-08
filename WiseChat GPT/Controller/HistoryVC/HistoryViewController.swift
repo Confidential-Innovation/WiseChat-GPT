@@ -6,11 +6,15 @@
 //
 
 import UIKit
-var historyArray = [String]()
+
+public var historyArray = [MessageItemList]()
+
 class HistoryViewController: UIViewController {
 
     @IBOutlet weak var historyBGView: UIView!
     @IBOutlet weak var historyTableView: UITableView!
+    
+    var selectHistoryItemArray = 0
     lazy var historyEmtyLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -49,6 +53,18 @@ class HistoryViewController: UIViewController {
         }
     }
     
+    func convertDateFormat(inputDate: String) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.locale = Locale(identifier: "es_US_POSIX")
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        dateFormatter.date(from: inputDate)
+        return inputDate
+    }
+
+    
+        
     @IBAction func historyBackActionButton(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
@@ -67,9 +83,52 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let historyQuestion = historyArray[indexPath.row]
+        let historyDate = "\(historyArray[indexPath.row].createdAt!)"
+        let date = convertDateFormat(inputDate: historyDate)
         let cell = historyTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
-        cell.historyLabel.text = historyArray[indexPath.row]
+        cell.historyLabel.text = historyQuestion.question
+        cell.timeLabelAdd.text = date
         cell.historylabelBGView.layer.cornerRadius = 15
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectHistoryItemArray = indexPath.row
+    }
+    
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        // 1
+        let index = 0
+//        var deleteItem = historyArray[indexPath.row]
+        // 2
+        let identifier = "\(index)" as NSString
+        
+        return UIContextMenuConfiguration(
+            identifier: identifier,
+            previewProvider: nil) { _ in
+                //
+                let mapAction = UIAction(
+                    title: "Delete",
+                    image: UIImage(systemName: "trash")) { _ in
+                    }
+                
+                
+                // 5
+                return UIMenu(title: "", image: nil, children: [mapAction])
+            }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let anim = CATransform3DTranslate(CATransform3DIdentity, 500, 100, 0)
+        cell.layer.transform = anim
+        cell.alpha = 0.3
+        
+        UIView.animate(withDuration: 0.4){
+            cell.layer.transform = CATransform3DIdentity
+            cell.alpha = 1
+        }
+    }
+    
 }
