@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HistoryDetailsViewController" id="Y6W-OH-hqX" customClass="HistoryDetailsViewController" customModule="WiseChat_GPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHx-a6-Ibj">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L91-N2-KUl">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="41.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRI-Vv-mLn">
+                                                <rect key="frame" x="167" y="0.0" width="69" height="41.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" red="0.92156863209999995" green="0.9529411793" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdB-TI-szx">
+                                                <rect key="frame" x="10.000000000000004" y="6" width="46.333333333333343" height="30"/>
+                                                <color key="tintColor" red="0.92156863209999995" green="0.9529411793" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="chevron.backward.square" catalog="system" symbolScale="large"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="detailsBackButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yvD-VP-5Gx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstItem="XdB-TI-szx" firstAttribute="leading" secondItem="L91-N2-KUl" secondAttribute="leading" constant="10" id="6Gp-Cg-eqH"/>
+                                            <constraint firstItem="jRI-Vv-mLn" firstAttribute="centerY" secondItem="L91-N2-KUl" secondAttribute="centerY" id="9Bt-bC-qs0"/>
+                                            <constraint firstItem="jRI-Vv-mLn" firstAttribute="centerX" secondItem="L91-N2-KUl" secondAttribute="centerX" constant="5" id="LQf-Ny-ceq"/>
+                                            <constraint firstItem="XdB-TI-szx" firstAttribute="centerY" secondItem="jRI-Vv-mLn" secondAttribute="centerY" id="XTZ-qo-28f"/>
+                                            <constraint firstAttribute="bottom" secondItem="jRI-Vv-mLn" secondAttribute="bottom" id="Yrx-Ka-01y"/>
+                                            <constraint firstItem="XdB-TI-szx" firstAttribute="width" secondItem="L91-N2-KUl" secondAttribute="width" multiplier="0.08" constant="14.76" id="ctt-Lu-aqm"/>
+                                            <constraint firstItem="XdB-TI-szx" firstAttribute="height" secondItem="L91-N2-KUl" secondAttribute="height" multiplier="0.84" constant="-5.0400000000000027" id="vvq-fL-D7b"/>
+                                            <constraint firstItem="jRI-Vv-mLn" firstAttribute="top" secondItem="L91-N2-KUl" secondAttribute="top" id="wDo-nW-QRh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-ey-y8X" userLabel="lineView">
+                                        <rect key="frame" x="0.0" y="41.666666666666671" width="393" height="0.6666666666666643"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.59999999999999998" id="7zM-pC-SnJ"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KBm-I6-qgz">
+                                        <rect key="frame" x="0.0" y="49.333333333333314" width="393" height="702"/>
+                                        <color key="backgroundColor" red="0.088443023989999994" green="0.082142714539999995" blue="0.080838719820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="zz7-Ew-ukE" customClass="HistoryDetailsTableViewCell" customModule="WiseChat_GPT" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zz7-Ew-ukE" id="jk4-t3-rga" customClass="HistoryDetailsTableViewCell" customModule="WiseChat_GPT" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c97-2n-I9m" userLabel="lineView">
+                                        <rect key="frame" x="0.0" y="758.33333333333337" width="393" height="0.66666666666662877"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.59999999999999998" id="Kjt-6r-aM5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.088443023989999994" green="0.082142714539999995" blue="0.080838719820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="L91-N2-KUl" firstAttribute="height" secondItem="OHx-a6-Ibj" secondAttribute="height" multiplier="0.055" id="27f-4d-2Km"/>
+                                    <constraint firstAttribute="trailing" secondItem="L91-N2-KUl" secondAttribute="trailing" id="B62-PL-chb"/>
+                                    <constraint firstItem="L91-N2-KUl" firstAttribute="leading" secondItem="OHx-a6-Ibj" secondAttribute="leading" id="DCk-BT-I83"/>
+                                    <constraint firstAttribute="trailing" secondItem="KBm-I6-qgz" secondAttribute="trailing" id="DtF-t1-tmC"/>
+                                    <constraint firstItem="KBm-I6-qgz" firstAttribute="top" secondItem="CJL-ey-y8X" secondAttribute="bottom" constant="7" id="NzP-O6-Gyd"/>
+                                    <constraint firstAttribute="trailing" secondItem="c97-2n-I9m" secondAttribute="trailing" id="PCU-Xs-Pnu"/>
+                                    <constraint firstAttribute="bottom" secondItem="c97-2n-I9m" secondAttribute="bottom" id="S4W-U1-pXu"/>
+                                    <constraint firstItem="c97-2n-I9m" firstAttribute="leading" secondItem="OHx-a6-Ibj" secondAttribute="leading" id="UW8-2r-Zmu"/>
+                                    <constraint firstItem="CJL-ey-y8X" firstAttribute="leading" secondItem="OHx-a6-Ibj" secondAttribute="leading" id="j4O-kR-4a1"/>
+                                    <constraint firstItem="c97-2n-I9m" firstAttribute="top" secondItem="KBm-I6-qgz" secondAttribute="bottom" constant="7" id="khX-Or-liI"/>
+                                    <constraint firstItem="KBm-I6-qgz" firstAttribute="leading" secondItem="OHx-a6-Ibj" secondAttribute="leading" id="mUm-ZV-jec"/>
+                                    <constraint firstItem="CJL-ey-y8X" firstAttribute="top" secondItem="L91-N2-KUl" secondAttribute="bottom" id="vrH-sK-sgF"/>
+                                    <constraint firstAttribute="trailing" secondItem="CJL-ey-y8X" secondAttribute="trailing" id="xJ1-r7-Qt1"/>
+                                    <constraint firstItem="L91-N2-KUl" firstAttribute="top" secondItem="OHx-a6-Ibj" secondAttribute="top" id="yeQ-RG-c9J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OHx-a6-Ibj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="UYD-2u-Sx2"/>
+                            <constraint firstItem="OHx-a6-Ibj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bqg-Xk-nMj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="OHx-a6-Ibj" secondAttribute="bottom" id="eEK-qk-DpA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OHx-a6-Ibj" secondAttribute="trailing" id="zt2-9E-PDt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="klK-W6-IZO"/>
+                    <connections>
+                        <outlet property="detailsTableView" destination="KBm-I6-qgz" id="fPu-9K-pd5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.70229007633588" y="2.8169014084507045"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward.square" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

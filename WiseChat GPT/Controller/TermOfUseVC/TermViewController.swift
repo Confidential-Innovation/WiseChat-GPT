@@ -11,7 +11,6 @@ class TermViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     /// Stausbar color change

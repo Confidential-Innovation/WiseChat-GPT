@@ -178,8 +178,8 @@ CapabilitiesView</string>
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="38"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Terms" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jV3-30-RVv">
-                                                <rect key="frame" x="141.33333333333334" y="4.9999999999999982" width="110.33333333333334" height="26.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <rect key="frame" x="143" y="4.9999999999999982" width="107.33333333333331" height="26.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -331,7 +331,7 @@ CapabilitiesView</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
-                                    <imageReference key="image" image="chevron.left.2" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="chevron.left.2" catalog="system"/>
                                 </state>
                                 <connections>
                                     <action selector="exampleBackButtonAction:" destination="wfg-O9-uKr" eventType="touchUpInside" id="gnw-9e-6hi"/>
@@ -409,7 +409,7 @@ CapabilitiesView</string>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="chevron.left.2" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="chevron.left.2" catalog="system"/>
                                         </state>
                                         <connections>
                                             <action selector="capabilityBackButtonAction:" destination="NJU-5U-nag" eventType="touchUpInside" id="28V-b8-pEZ"/>
@@ -508,7 +508,7 @@ CapabilitiesView</string>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="chevron.left.2" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="chevron.left.2" catalog="system"/>
                                         </state>
                                         <connections>
                                             <action selector="limitationsBackButtonAction:" destination="6wQ-pC-EMO" eventType="touchUpInside" id="b78-m7-8UI"/>

@@ -7,54 +7,57 @@
 
 import UIKit
 
-public var historyArray = [MessageItemList]()
+var selectHistoryItemIndex = 0
 
 class HistoryViewController: UIViewController {
 
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    
     @IBOutlet weak var historyBGView: UIView!
     @IBOutlet weak var historyTableView: UITableView!
+    @IBOutlet weak var historyEmtyLabel: UILabel!
     
-    var selectHistoryItemArray = 0
-    lazy var historyEmtyLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "History is Emty!"
-        label.textColor = .white
-        label.textAlignment = .center
-        label.numberOfLines = .zero
-        label.font = UIFont.systemFont(ofSize: 25)
-        return label
-    }()
+    var historyArray = [MessageItemList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         historyTableViewCellSetup()
-        chackHistoryArrayNill()
 
     }
     
-    // MARK:   Private methods
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        coreDataSaveMessage()
+        historyIsEmty()
+    }
+
+    // MARK: Private methods
+    
     /// Stausbar color change
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent //.default for black style
     }
     
-    private func chackHistoryArrayNill() {
-        if historyArray.count == 0 {
-            historyTableView.isHidden = true
-            historyBGView.addSubview(historyEmtyLabel)
-            historyEmtyLabel.centerXAnchor.constraint(equalTo: historyBGView.centerXAnchor).isActive = true
-            historyEmtyLabel.centerYAnchor.constraint(equalTo: historyBGView.centerYAnchor).isActive = true
-        
+    func coreDataSaveMessage() {
+        if let data = try? context?.fetch(MessageItemList.fetchRequest()) {
+            historyArray = data
+            historyArray.sort{$0.createdAt! > $1.createdAt! }
+            DispatchQueue.main.async {
+                self.historyTableView.reloadData()
+            }
+        }
+    }
+    
+    private func historyIsEmty() {
+        historyEmtyLabel.isHidden = true
+        if historyArray.count > 0 {
+            historyEmtyLabel.isHidden = true
         } else {
-            
-            historyTableView.isHidden = false
+            historyEmtyLabel.isHidden = false
         }
     }
     
     func convertDateFormat(inputDate: String) -> String {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.locale = Locale(identifier: "es_US_POSIX")
@@ -63,7 +66,6 @@ class HistoryViewController: UIViewController {
         return inputDate
     }
 
-    
         
     @IBAction func historyBackActionButton(_ sender: UIButton) {
         self.dismiss(animated: true)
@@ -88,47 +90,82 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         let date = convertDateFormat(inputDate: historyDate)
         let cell = historyTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
         cell.historyLabel.text = historyQuestion.question
+        print(historyQuestion)
         cell.timeLabelAdd.text = date
         cell.historylabelBGView.layer.cornerRadius = 15
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectHistoryItemArray = indexPath.row
+        let storyboard = UIStoryboard(name: "Details", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HistoryDetailsViewController") as! HistoryDetailsViewController
+        selectHistoryItemIndex = indexPath.row
+        answerDetails = historyArray[selectHistoryItemIndex].answer!
+        questionDetails = historyArray[selectHistoryItemIndex].question!
+        vc.transitioningDelegate = self
+        vc.modalPresentationStyle = .custom
+        self.present(vc, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
-        // 1
         let index = 0
-//        var deleteItem = historyArray[indexPath.row]
-        // 2
+
         let identifier = "\(index)" as NSString
-        
         return UIContextMenuConfiguration(
             identifier: identifier,
-            previewProvider: nil) { _ in
-                //
-                let mapAction = UIAction(
-                    title: "Delete",
-                    image: UIImage(systemName: "trash")) { _ in
+            previewProvider: nil) { [self] _ in
+                let done = UIAction(
+                    title: "Done",
+                    image: UIImage(systemName: "trash")) { [self] _ in
+                        
+                        let index = [IndexPath(row: indexPath.row, section: 0)]
+
+                        DatabaseHelper.shareInstance.deleteItem(item: historyArray[indexPath.row])
+                        try? DatabaseHelper.shareInstance.context?.save()
+                        
+                        historyArray.remove(at: indexPath.row)
+                        historyTableView.deleteRows(at: index, with: .automatic)
                     }
-                
-                
-                // 5
-                return UIMenu(title: "", image: nil, children: [mapAction])
+                let cancle = UIAction(
+                    title: "Cancle",
+                    image: UIImage(systemName: "clear")) { _ in
+                    }
+                return UIMenu(title: "Are you sure that this message delete!", image: nil, children: [done,cancle])
+
             }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let index = [IndexPath(row: indexPath.row, section: 0)]
+            DatabaseHelper.shareInstance.deleteItem(item: historyArray[indexPath.row])
+            try? DatabaseHelper.shareInstance.context?.save()
+            historyArray.remove(at: indexPath.row)
+            historyTableView.deleteRows(at: index, with: .automatic)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let anim = CATransform3DTranslate(CATransform3DIdentity, 500, 100, 0)
+        let anim = CATransform3DTranslate(CATransform3DIdentity, -400, -100, 0)
         cell.layer.transform = anim
         cell.alpha = 0.3
         
-        UIView.animate(withDuration: 0.4){
+        UIView.animate(withDuration: 0.3){
             cell.layer.transform = CATransform3DIdentity
             cell.alpha = 1
         }
     }
+}
+
+// MARK: Custom push and pop back transition animation
+extension HistoryViewController: UIViewControllerTransitioningDelegate {
     
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentTransition()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissTransition()
+    }
 }

@@ -24,8 +24,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="38"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qustions History" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl2-Vj-S1c">
-                                                <rect key="frame" x="110.33333333333333" y="4.9999999999999982" width="172.33333333333337" height="26.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <rect key="frame" x="119.66666666666667" y="5" width="153.66666666666663" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -37,7 +37,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-sx-Mol">
-                                        <rect key="frame" x="20" y="7.3333333333333286" width="17.333333333333329" height="22"/>
+                                        <rect key="frame" x="20" y="6" width="17.333333333333329" height="22"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="xmark" catalog="system"/>
@@ -66,6 +66,15 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History is Emty!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkC-6Y-DW2">
+                                        <rect key="frame" x="122.33333333333333" y="369" width="148.66666666666669" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="YzC-Wk-iAt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -79,6 +88,8 @@
                                     <constraint firstAttribute="bottom" secondItem="p9V-ef-u42" secondAttribute="bottom" id="H7v-eZ-Fla"/>
                                     <constraint firstItem="hn5-DM-tk4" firstAttribute="top" secondItem="mZ9-7x-y3e" secondAttribute="top" id="aac-Uj-wDV"/>
                                     <constraint firstItem="hn5-DM-tk4" firstAttribute="height" secondItem="mZ9-7x-y3e" secondAttribute="height" multiplier="0.05" id="bfe-wr-YdC"/>
+                                    <constraint firstItem="mkC-6Y-DW2" firstAttribute="centerY" secondItem="mZ9-7x-y3e" secondAttribute="centerY" id="d2F-ln-Zdi"/>
+                                    <constraint firstItem="mkC-6Y-DW2" firstAttribute="centerX" secondItem="mZ9-7x-y3e" secondAttribute="centerX" id="gxw-Yf-S8C"/>
                                     <constraint firstItem="ZCA-sx-Mol" firstAttribute="leading" secondItem="mZ9-7x-y3e" secondAttribute="leading" constant="20" id="s6W-iX-ld0"/>
                                     <constraint firstItem="hn5-DM-tk4" firstAttribute="leading" secondItem="mZ9-7x-y3e" secondAttribute="leading" id="ttD-8D-R0i"/>
                                     <constraint firstItem="ZCA-sx-Mol" firstAttribute="centerY" secondItem="Pl2-Vj-S1c" secondAttribute="centerY" id="xfx-mz-1fK"/>
@@ -96,6 +107,7 @@
                     </view>
                     <connections>
                         <outlet property="historyBGView" destination="mZ9-7x-y3e" id="L9g-rp-gMk"/>
+                        <outlet property="historyEmtyLabel" destination="mkC-6Y-DW2" id="9EE-Br-58N"/>
                         <outlet property="historyTableView" destination="p9V-ef-u42" id="f4n-dG-bhU"/>
                     </connections>
                 </viewController>

@@ -296,13 +296,13 @@
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-4r-E7n">
-                                        <rect key="frame" x="58" y="35" width="277" height="191"/>
+                                        <rect key="frame" x="58" y="40.333333333333314" width="277" height="176"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powerfull" translatesAutoresizingMaskIntoConstraints="NO" id="NzV-SQ-Yx2">
                                         <rect key="frame" x="39.333333333333343" y="634.66666666666663" width="314.33333333333326" height="35"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WiseChat GPT" translatesAutoresizingMaskIntoConstraints="NO" id="CTJ-Le-ybx">
-                                        <rect key="frame" x="58" y="237" width="277" height="19"/>
+                                        <rect key="frame" x="58" y="227.33333333333331" width="277" height="19"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1019607931" green="0.1019607931" blue="0.1019607931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -317,7 +317,7 @@
                                     <constraint firstItem="TEY-xN-Brp" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.0645586" id="CA3-Ne-wOY"/>
                                     <constraint firstItem="NzV-SQ-Yx2" firstAttribute="centerX" secondItem="ZAV-7q-xpK" secondAttribute="centerX" id="CPN-Cx-F1j"/>
                                     <constraint firstItem="5Pu-Gc-4jx" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" id="CQz-37-mOr"/>
-                                    <constraint firstItem="dc1-4r-E7n" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.2" constant="39.199999999999989" id="Cc4-gc-IlD"/>
+                                    <constraint firstItem="dc1-4r-E7n" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.18" constant="39.199999999999989" id="Cc4-gc-IlD"/>
                                     <constraint firstItem="5O1-uM-mAM" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" multiplier="0.662426" id="DNq-oA-DWR"/>
                                     <constraint firstItem="CTJ-Le-ybx" firstAttribute="centerX" secondItem="dc1-4r-E7n" secondAttribute="centerX" id="J5o-FJ-j5C"/>
                                     <constraint firstItem="3Uk-oA-BW0" firstAttribute="leading" secondItem="ZAV-7q-xpK" secondAttribute="leading" constant="30" id="KGV-IS-7r6"/>
@@ -337,7 +337,7 @@
                                     <constraint firstItem="CTJ-Le-ybx" firstAttribute="bottom" secondItem="dc1-4r-E7n" secondAttribute="bottom" constant="30" id="jPC-cC-IS9"/>
                                     <constraint firstItem="NzV-SQ-Yx2" firstAttribute="width" secondItem="ZAV-7q-xpK" secondAttribute="width" multiplier="0.8" id="nGO-aO-CHW"/>
                                     <constraint firstAttribute="bottom" secondItem="MAK-Q9-6GT" secondAttribute="bottom" multiplier="852:513" id="o4B-uv-Jl3"/>
-                                    <constraint firstAttribute="bottom" secondItem="dc1-4r-E7n" secondAttribute="bottom" multiplier="852:230" constant="-78.182608695652107" id="odh-de-QYW"/>
+                                    <constraint firstAttribute="bottom" secondItem="dc1-4r-E7n" secondAttribute="bottom" multiplier="852:220" constant="-78.182608695652107" id="odh-de-QYW"/>
                                     <constraint firstItem="CTJ-Le-ybx" firstAttribute="width" secondItem="dc1-4r-E7n" secondAttribute="width" id="szo-F1-3kh"/>
                                     <constraint firstItem="8aq-Cv-y8z" firstAttribute="leading" secondItem="ZAV-7q-xpK" secondAttribute="leading" constant="30" id="uAd-8i-l2D"/>
                                     <constraint firstItem="MAK-Q9-6GT" firstAttribute="height" secondItem="ZAV-7q-xpK" secondAttribute="height" multiplier="0.0645586" id="ulj-aG-gMZ"/>

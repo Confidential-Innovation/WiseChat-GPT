@@ -26,15 +26,19 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func contactActionButton(_ sender: UIButton) {
+        
     }
     
     @IBAction func writeAReviewActionButton(_ sender: UIButton) {
+        
     }
     
     @IBAction func privactyPolicyActionButton(_ sender: UIButton) {
+        
     }
     
     @IBAction func shareAppActionButton(_ sender: UIButton) {
+        
     }
     
     @IBAction func TermsOfUseActionButton(_ sender: UIButton) {
@@ -44,6 +48,7 @@ class SettingsViewController: UIViewController {
         vc.transitioningDelegate = self
         self.present(vc, animated: true)
     }
+    
     private func settingRobotGifPlay() {
         let imageName = UIImage.gifImageWithName("robot gif")
         settingRobotGifView.image = imageName

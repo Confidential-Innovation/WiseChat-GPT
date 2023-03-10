@@ -24,8 +24,11 @@ class HomeViewController: UIViewController {
     let scanLoderView: UIView = UIView()
     let typingLoaderView: UIView = UIView()
     var chat = [String]()
+    var answerArray = [String]()
+    var questionArray = [String]()
     var request = VNRecognizeTextRequest(completionHandler: nil)
-    var textShare = ""
+    var questionText = ""
+    var answerText = ""
     var selectIndexNumber = 0
     var answerNumberCount = 0
     var keyboradHeight = 0
@@ -55,7 +58,7 @@ class HomeViewController: UIViewController {
         setupUI()
         showActivityIndicatory()
         keyBoardHeightGet()
-        getAllItem()
+//        getAllItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -216,9 +219,11 @@ class HomeViewController: UIViewController {
             copyAction.setValue(copyImage, forKey: "image")
         }
         
-        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { [self]
             (alert: UIAlertAction!) -> Void in
-            
+            DatabaseHelper.shareInstance.createItem(question: questionText, answer: answerText.replacingOccurrences(of: "\n\n", with: ""))
+            try? DatabaseHelper.shareInstance.context?.save()
+
         })
         
         let saveImage = UIImage(systemName: "text.badge.plus")
@@ -255,7 +260,6 @@ class HomeViewController: UIViewController {
 
     }
 
-    
     /// Private UI Setup
     private func setupUI() {
         wiseChatTextView.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
@@ -301,8 +305,12 @@ class HomeViewController: UIViewController {
                 let gptText = try await APIService().sendPromtToGPT(promt: prompt)
                 await MainActor.run {
                     chat.append(prompt)
+                    questionArray.append(prompt)
+
                     chat.append(gptText.replacingOccurrences(of: "\n\n", with: ""))
-                    createItem(question: prompt, answer: gptText.replacingOccurrences(of: "\n\n", with: ""))
+                    answerArray.append(gptText.replacingOccurrences(of: "\n\n", with: ""))
+                    questionText = prompt
+                    answerText = gptText.replacingOccurrences(of: "\n\n", with: "")
                     typingLoaderView.isHidden = true
                     wiseChatTableView.alpha = 1.0
                     wiseChatTableView.reloadData()
@@ -317,6 +325,8 @@ class HomeViewController: UIViewController {
                 let alert = UIAlertController(title: "Attention!", message: "Error! 'Please change your API key' or 'Your internet not access! Please your internet connect.'", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                 alert.view.tintColor = .systemPink
+                sendButtonHide.alpha = 1
+                bgView.isUserInteractionEnabled = true
                 self.present(alert, animated: true, completion: nil)
             }
         }
@@ -392,33 +402,41 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row % 2 == 0 {
             let cell = wiseChatTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WiseChatTableViewCell
             cell.selectionStyle = .none
-            cell.wiseChatTextLabel?.text = chat[indexPath.row]
-            cell.wiseChatTextLabel.textColor = .white
-            cell.bgcellView.backgroundColor = #colorLiteral(red: 0, green: 0.352879107, blue: 1, alpha: 1)
-            cell.bgcellView.layer.cornerRadius = 10
-            cell.bgcellView.layer.shadowColor = UIColor.blue.cgColor
-            cell.bgcellView.layer.shadowOpacity = 1
-            cell.bgcellView.layer.shadowOffset = CGSize.zero
-            cell.bgcellView.layer.shadowRadius = 1.5
-            cell.bgcellView.layer.borderColor = .init(red: 137, green: 207, blue: 240, alpha: 0.1)
-            cell.bgcellView.layer.borderWidth = 3
-            cell.wiseChatImageView.image = UIImage(named: "man")
+            cell.userTextLabel?.text = chat[indexPath.row]
+            cell.userBGView.layer.borderColor = .init(red: 137, green: 207, blue: 240, alpha: 0.1)
+            cell.userBGView.layer.shadowColor = UIColor.blue.cgColor
+            cell.userBGView.layer.shadowOpacity = 1
+            cell.userBGView.layer.shadowOffset = CGSize.zero
+            cell.userBGView.layer.shadowRadius = 3
+            cell.userBGView.layer.borderWidth = 1.5
+            cell.userImageView.image = UIImage(named: "man")
+            cell.wiseChatTextLabel.text = ""
+            cell.userBGView.isHidden = false
+            cell.userTextLabel.isHidden = false
+            cell.userImageView.isHidden = false
+            cell.wiseChatTextLabel.isHidden = true
+            cell.wiseChatImageView.isHidden = true
+            cell.chatAnswerbgcellView.isHidden = true
             return cell
             
         } else {
             let cell = wiseChatTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WiseChatTableViewCell
             cell.selectionStyle = .none
-            cell.bgcellView.backgroundColor = #colorLiteral(red: 0.9143115878, green: 0.9542326331, blue: 0.9878992438, alpha: 1)
-            cell.bgcellView.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
-            cell.bgcellView.layer.borderWidth = 1.5
-            cell.bgcellView.layer.shadowColor = UIColor.black.cgColor
-            cell.bgcellView.layer.shadowOpacity = 1
-            cell.bgcellView.layer.shadowOffset = CGSize.zero
-            cell.bgcellView.layer.shadowRadius = 3
-            cell.bgcellView.layer.cornerRadius = 15
+            cell.chatAnswerbgcellView.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+            cell.chatAnswerbgcellView.layer.borderWidth = 1.5
+            cell.chatAnswerbgcellView.layer.shadowColor = UIColor.black.cgColor
+            cell.chatAnswerbgcellView.layer.shadowOpacity = 1
+            cell.chatAnswerbgcellView.layer.shadowOffset = CGSize.zero
+            cell.chatAnswerbgcellView.layer.shadowRadius = 3
             cell.wiseChatTextLabel?.text = chat[indexPath.row]
-            cell.wiseChatTextLabel.textColor = .black
             cell.wiseChatImageView.image = UIImage(named: "robot")
+            cell.chatAnswerbgcellView.isHidden = false
+            cell.wiseChatTextLabel.isHidden = false
+            cell.wiseChatImageView.isHidden = false
+            cell.userTextLabel.text = ""
+            cell.userTextLabel.isHidden = true
+            cell.userImageView.isHidden = true
+            cell.userBGView.isHidden = true
             return cell
         }
     }
@@ -428,20 +446,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             selectIndexNumber = indexPath.row
             answerNumberCount = ((indexPath.row)+1)/2
             tableViewCellClickAlertMenuOption()
-
         } else {
+            
         }
     }
     
     // MARK: Cell Animation
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
+
         if indexPath.row % 2 == 0 {
             let anim = CATransform3DTranslate(CATransform3DIdentity, 500, 100, 0)
             cell.layer.transform = anim
             cell.alpha = 0.3
-            
+
             UIView.animate(withDuration: 0.4){
                 cell.layer.transform = CATransform3DIdentity
                 cell.alpha = 1
@@ -450,49 +468,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let anim = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
             cell.layer.transform = anim
             cell.alpha = 0.3
-            
+
             UIView.animate(withDuration: 0.5){
                 cell.layer.transform = CATransform3DIdentity
                 cell.alpha = 1
             }
         }
-        
     }
-    
-    
-    //    MARK: TableView tapped to contextMenu
-/*
-    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
-        // 1
-        var index = 0
-        if indexPath.row % 2 == 0 {
-            index = indexPath.row
-
-        }
-        // 2
-        let identifier = "\(index)" as NSString
-
-        return UIContextMenuConfiguration(
-            identifier: identifier,
-            previewProvider: nil) { _ in
-                //
-                let mapAction = UIAction(
-                    title: "View map",
-                    image: UIImage(systemName: "map")) { _ in
-                    }
-
-                // 4
-                let shareAction = UIAction(
-                    title: "Sshare",
-                    image: UIImage(systemName: "square.and.arrow.up")) { _ in
-                    }
-
-                // 5
-                return UIMenu(title: "", image: nil, children: [mapAction, shareAction])
-            }
-    }
- */
-    
 }
 
 // MARK: Camera UIImageViewController Delegate
@@ -628,42 +610,41 @@ extension UIAlertController {
     }
 }
 
+//    MARK: CoreData Function
 
-extension HomeViewController {
-    //    MARK: CoreData Function
-
-       internal func getAllItem() {
-            do {
-                historyArray = try context.fetch(MessageItemList.fetchRequest())
-            }
-            catch {
-                print("Error")
-            }
-        }
-        
-       public func createItem(question: String, answer: String) {
-            let newItem = MessageItemList(context: context)
-            newItem.question = question
-            newItem.answer = answer
-            newItem.createdAt = Date()
-
-            do {
-                try context.save()
-                getAllItem()
-            }
-            catch {
-                // Error
-            }
-        }
-        
-    fileprivate func deleteItem(item: MessageItemList) {
-        context.delete(item)
-        
-        do {
-            try context.save()
-        }
-        catch {
-            // Error
-        }
-    }
-}
+//extension HomeViewController {
+//    func getAllItem() {
+//        do {
+//            historyArray = try context.fetch(MessageItemList.fetchRequest())
+//        }
+//        catch {
+//            print("Error")
+//        }
+//    }
+//
+//    public func createItem(question: String, answer: String) {
+//        let newItem = MessageItemList(context: context)
+//        newItem.question = question
+//        newItem.answer = answer
+//        newItem.createdAt = Date()
+//
+//        do {
+//            try context.save()
+//            getAllItem()
+//        }
+//        catch {
+//            // Error
+//        }
+//    }
+//
+//    fileprivate func deleteItem(item: MessageItemList) {
+//        context.delete(item)
+//
+//        do {
+//            try context.save()
+//        }
+//        catch {
+//            // Error
+//        }
+//    }
+//}
