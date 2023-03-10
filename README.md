@@ -7,7 +7,6 @@
 ![](https://img.shields.io/badge/Swift-5.7.1-orange.svg?style=flat)
 
 <br/>
-<h3> The full project is coming soon... </h3>
 
 The OpenAI API uses API keys for authentication. Visit your <a href="https://platform.openai.com/account/api-keys" target="_blank">API Keys</a> page to retrieve the API key you'll use in your requests.
 
